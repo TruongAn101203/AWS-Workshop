@@ -15,16 +15,16 @@ Trên trang roles, nhấn nút *Create role*.
 
 Ở màn hình tiếp theo, chọn *Lambda* làm dịch vụ sẽ sử dụng vai trò này, sau đó nhấn nút *Next*.
 
-![ConnectPrivate](/images/4-Securely/4.8.png)
+![ConnectPrivate](../../../../images/4-Securely/4.8.png)
 
 Trên trang phân quyền, tìm kiếm vai trò *AmazonSSMReadOnlyAccess* và chọn nó. Bạn đang cấp quyền chỉ đọc cho AWS Systems Manager để lấy tham số từ Parameter Store. Nhấn nút *Next*.
 
-![ConnectPrivate](/images/4-Securely/4.9.png)
+![ConnectPrivate](../../../../images/4-Securely/4.9.png)
 
 Trên trang xem lại, nhập tên vai trò phù hợp, ví dụ *DojoLambdaSSMRole*.
 
-![ConnectPrivate](/images/4-Securely/4.10.png)
-![ConnectPrivate](/images/4-Securely/4.11.png)
+![ConnectPrivate](../../../../images/4-Securely/4.10.png)
+![ConnectPrivate](../../../../images/4-Securely/4.11.png)
 
 Cuối cùng, nhấn nút *Create Role*.
 

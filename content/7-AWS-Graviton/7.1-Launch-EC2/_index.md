@@ -19,31 +19,31 @@ You are selecting *Ubuntu Server* as this is one of the Linux distributions supp
 - Select *Ubuntu Server 24.04* LTS from AMI dropdown;
 - Select *64-bit (Arm)* as architecture.
 
-![ConnectPrivate](/images/7-Graviton/7.1.png)
+![ConnectPrivate](../../images/7-Graviton/7.1.png)
 
 Next select an *c7g.medium* compute-optimized instance type that offers 1 vCPU and 2GB of memory.
 
-![ConnectPrivate](/images/7-Graviton/7.2.png)
+![ConnectPrivate](../../images/7-Graviton/7.2.png)
 
 Next you need to either create new or supply an existing key-pair. Create and download key-pair.
 
-![ConnectPrivate](/images/7-Graviton/7.2.1.png)
+![ConnectPrivate](../../images/7-Graviton/7.2.1.png)
 
 Next under network settings configure new security group:
 
 - Open port 5000 to be able to access web application once it's up and running
 
-![ConnectPrivate](/images/7-Graviton/7.3.png)
+![ConnectPrivate](../../images/7-Graviton/7.3.png)
 
 Click *Launch Instance*.
 
 Now your instance is launching and you can click on the *View Instances* button to see the status of instances within your AWS account.
 
-![ConnectPrivate](/images/7-Graviton/7.4.png)
+![ConnectPrivate](../../images/7-Graviton/7.4.png)
 
 We are ready to connect to your c7g instance. The easiest way is to connect using Session Manager right from AWS Console.
 
-![ConnectPrivate](/images/7-Graviton/7.5.png)
+![ConnectPrivate](../../images/7-Graviton/7.5.png)
 
 After successfully connecting, you will be at the Ubuntu command prompt.
 

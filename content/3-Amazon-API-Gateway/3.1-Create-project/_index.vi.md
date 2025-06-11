@@ -9,13 +9,13 @@ pre : " <b> 3.1 </b> "
 
 Tạo dự án mới sử dụng mẫu *AWS Serverless* Application (*.NET Core - C#*).
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.1.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.1.png)
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.2.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.2.png)
 
 Chọn mẫu *ASP.NET Core Minimal API* blueprint.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.3.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.3.png)
 
 Xem qua dự án mẫu được tạo:
 
@@ -23,7 +23,7 @@ Xem qua dự án mẫu được tạo:
 
 - File *serverless-template* chứa mẫu AWS Serverless Application Model (SAM)
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.4.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.4.png)
 
 - File Program.cs thêm hỗ trợ AWS Lambda.
 
@@ -33,5 +33,5 @@ Xem qua dự án mẫu được tạo:
   builder.Services.AddAWSLambdaHosting(LambdaEventSource.RestApi);
 ```
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.5.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.5.png)
 

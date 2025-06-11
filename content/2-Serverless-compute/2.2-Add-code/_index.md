@@ -9,7 +9,7 @@ pre : " <b> 2.2 </b> "
 
 Add *SixLabors.ImageSharp* NuGet Package to the project:
 
-![ConnectPrivate](/images/2-Severless-compute/2.6.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.6.png)
 
 Add the following using statements to the *Function.cs file*:
 

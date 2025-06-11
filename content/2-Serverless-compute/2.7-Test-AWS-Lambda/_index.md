@@ -13,12 +13,12 @@ On the AWS Explorer choose *Amazon S3* node and choose Amazon S3 bucket that you
 
 Create a new folder called *images*, by clicking the *Create Folder* button. 
 
-![ConnectPrivate](/images/2-Severless-compute/2.21.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.21.png)
 
 Go into the *images* folder.
 
 Click on the *Upload file* button, select and upload some test image file (jpg or jpeg).
 After a few seconds, the image will appear in the *images* folder.
 
-![ConnectPrivate](/images/2-Severless-compute/2.22.png) 
+![ConnectPrivate](../../images/2-Severless-compute/2.22.png) 
 

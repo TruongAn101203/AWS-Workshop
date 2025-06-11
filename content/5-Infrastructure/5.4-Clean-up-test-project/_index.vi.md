@@ -34,7 +34,7 @@ Bây giờ bạn đã chỉnh sửa nội dung của stack, bạn có thể yêu
 
 Kết quả đầu ra sẽ như sau. Như mong đợi, tất cả tài nguyên sẽ bị xóa.
 
-![ConnectPrivate](/images/5-Infrastructure/5.10.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.10.png)
 
 Chạy *cdk deploy* và xem các tài nguyên bị xóa:
 
@@ -42,4 +42,4 @@ Chạy *cdk deploy* và xem các tài nguyên bị xóa:
     cdk deploy
 ```
 
-![ConnectPrivate](/images/5-Infrastructure/5.11.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.11.png)

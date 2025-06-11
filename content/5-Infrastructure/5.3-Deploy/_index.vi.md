@@ -23,8 +23,8 @@ Hãy xem template được tổng hợp từ ứng dụng mẫu:
 
 Nó sẽ xuất ra template CloudFormation như sau:
 
-![ConnectPrivate](/images/5-Infrastructure/5.3.png)
-![ConnectPrivate](/images/5-Infrastructure/5.3.1.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.3.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.3.1.png)
 
 Như bạn thấy, template này bao gồm bốn resources:
 
@@ -49,7 +49,7 @@ CDK CLI yêu cầu bạn phải ở cùng thư mục với file cdk.json của b
 
 Bạn sẽ thấy kết quả như sau:
 
-![ConnectPrivate](/images/5-Infrastructure/5.4.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.4.png)
 
 [Deploy stack](#)
 
@@ -61,13 +61,13 @@ Bạn sẽ thấy kết quả như sau:
 
 Bạn sẽ thấy cảnh báo như sau:
 
-![ConnectPrivate](/images/5-Infrastructure/5.5.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.5.png)
 
 Đây là cảnh báo rằng việc triển khai app có thể gây ra một số rủi ro. Vì chúng ta cần cho phép topic gửi tin nhắn đến hàng đợi, nhập *y* để triển khai stack và tạo các resources.
 
 Kết quả xuất ra sẽ như sau:
 
-![ConnectPrivate](/images/5-Infrastructure/5.6.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.6.png)
 
 [The CloudFormation Console](#)
 
@@ -77,15 +77,15 @@ CDK apps được triển khai thông qua AWS CloudFormation. Mỗi CDK stack t�
 
 Hãy cùng xem console AWS CloudFormation. Vào AWS Console và tìm kiếm *CloudFormation*.
 
-![ConnectPrivate](/images/5-Infrastructure/5.7.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.7.png)
 
 Lọc danh sách các stack theo từ khóa cdk và bạn sẽ thấy hai CDK stack đã được triển khai:
 
 - *CDKToolkit* - CDK Toolkit Stack. Nó được tạo bởi *cdk bootstrap* và quản lý các resources cần thiết để quản lý các Cloud Applications với AWS CDK.
 - *CdkLabStack* - CDK stack mẫu mà bạn vừa triển khai bằng lệnh *cdk deploy*.
 
-![ConnectPrivate](/images/5-Infrastructure/5.8.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.8.png)
 
 Chọn *CdkLabStack* và mở tab *Resources*:
 
-![ConnectPrivate](/images/5-Infrastructure/5.9.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.9.png)

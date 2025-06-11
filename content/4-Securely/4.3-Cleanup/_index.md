@@ -19,4 +19,4 @@ You should note that this action cannot be undone. Therefore, if the function co
 
 - Confirm the deletion when prompted.
 
-![ConnectPrivate](/images/4-Securely/4.20.clean.png)
+![ConnectPrivate](../../images/4-Securely/4.20.clean.png)

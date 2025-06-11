@@ -19,4 +19,4 @@ Bạn nên lưu ý rằng hành động này không thể hoàn tác. Vì vậy,
 
 - Xác nhận việc xóa khi được hỏi.
 
-![ConnectPrivate](/images/4-Securely/4.20.clean.png)
+![ConnectPrivate](../../../images/4-Securely/4.20.clean.png)

@@ -13,16 +13,16 @@ On the AWS Console page, click on the *Lambda* link under the *Compute* section 
 
 Click on the AWS Lambda function name you have published.
 
-![ConnectPrivate](/images/2-Severless-compute/2.17.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.17.png)
 
 Add a Amazon S3 trigger to the AWS Lambda function by clicking on the *Add trigger* on the left.
 
-![ConnectPrivate](/images/2-Severless-compute/2.18.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.18.png)
 
 Configure the trigger: select the bucket you have created on the bucket drop-down and enter *images/* as the prefix the AWS Lambda will be watching, and press *Add*.
 
-![ConnectPrivate](/images/2-Severless-compute/2.19.png)
-![ConnectPrivate](/images/2-Severless-compute/2.19.1.png) 
+![ConnectPrivate](../../images/2-Severless-compute/2.19.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.19.1.png) 
 
 
 {{% notice warning %}}
@@ -32,4 +32,4 @@ The AWS Lambda function will save the thumbnail image in a new folder called thu
 
 Once trigger is created, you will see it under *Triggers*section of your AWS Lambda function:
 
-![ConnectPrivate](/images/2-Severless-compute/2.20.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.20.png)

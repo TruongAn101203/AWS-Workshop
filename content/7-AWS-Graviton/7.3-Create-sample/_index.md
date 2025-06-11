@@ -30,14 +30,14 @@ Now you can build and run the generated sample .NET web application and expose i
 
 Once you see the output like this, you can use your web browser to access it:
 
-![ConnectPrivate](/images/7-Graviton/7.8.png) 
+![ConnectPrivate](../../images/7-Graviton/7.8.png) 
 
 On the AWS Console page, click on the *EC2* link under the *Compute* section (or search for *EC2*) and locate your *EC2* instance. Copy public IPv4 address of the instance.
 
-![ConnectPrivate](/images/7-Graviton/7.8.1.png)
+![ConnectPrivate](../../images/7-Graviton/7.8.1.png)
 
 Open Web browser and navigate to public IPv4 address of the instance, port 5000:
 
-![ConnectPrivate](/images/7-Graviton/7.9.png)
+![ConnectPrivate](../../images/7-Graviton/7.9.png)
 
 Congratulations! You have .NET 8 web application is up and running on AWS Graviton instance!

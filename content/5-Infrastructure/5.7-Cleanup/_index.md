@@ -15,4 +15,4 @@ In order to delete created stack (and all created resources like AWS Lambda and 
 
 You will see output like this once the stack is destroyed:
 
-![ConnectPrivate](/images/5-Infrastructure/5.22.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.22.png)

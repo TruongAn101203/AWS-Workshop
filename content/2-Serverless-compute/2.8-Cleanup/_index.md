@@ -16,7 +16,7 @@ You should note that this action cannot be undone. Therefore, if the function co
 - Click the "Actions" button: In the top-right corner above the function list, click on the **Actions** button to open a dropdown menu.
 - Choose "Delete": From the dropdown options, select **Delete** to initiate the deletion process.
 
-![ConnectPrivate](/images/2-Severless-compute/2.23.clean.png)
+![ConnectPrivate](../../images/2-Severless-compute/2.23.clean.png)
 
 - Confirm the deletion: AWS will prompt you to confirm the action. Follow the on-screen instructions to confirm and permanently delete the selected function.
 

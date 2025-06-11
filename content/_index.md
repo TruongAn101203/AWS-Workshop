@@ -30,7 +30,7 @@ You are going to use the following AWS services:
 - AWS Cloud Development Kit (CDK)
 - Amazon EC2
   
-<!-- ![ConnectPrivate](/images/arc-log.png)  -->
+<!-- ![ConnectPrivate](../../images/arc-log.png)  -->
 
 ### Content
  1. [Preparation](1-prerequiste/)

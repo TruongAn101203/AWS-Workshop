@@ -9,20 +9,20 @@ pre : " <b> 3.1 </b> "
 
 Create new project using *AWS Serverless* Application (*.NET Core - C#*) template.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.1.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.1.png)
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.2.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.2.png)
 
 Select *ASP.NET Core Minimal API* blueprint.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.3.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.3.png)
 
 Take a look at the generated sample project:
 
 - *aws-lambda-tools-defaults.json* file contains reference to the AWS Serverless Application Model (SAM) template that should be used to deploy serverless application
 - *serverless-template* file contains AWS Serverless Application Model (SAM) template
   
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.4.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.4.png)
 
 - Program.cs adds AWS Lambda support.
 
@@ -32,4 +32,4 @@ Take a look at the generated sample project:
     builder.Services.AddAWSLambdaHosting(LambdaEventSource.RestApi);
     ```
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.5.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.5.png)

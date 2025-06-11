@@ -11,21 +11,21 @@ Amazon Comprehend is a natural language processing (NLP) service that uses machi
 
 In this lab, you will use Amazon Comprehend to detect the language of the text and understand the sentiment of sample book review.
 
-[Create project]()
+#### Create project
 
 1. Create a new .NET Console App project.
 
-![ConnectPrivate](/images/6-Adding-innovation/6.1.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.1.png)
 
-![ConnectPrivate](/images/6-Adding-innovation/6.2.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.2.png)
 
 Choose .NET 8.0 framework:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.3.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.3.png)
 
 2. Add *AWSSDK.Comprehend* Nuget package to the project:
    
-![ConnectPrivate](/images/6-Adding-innovation/6.4.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.4.png)
 
 3. Add the following import statements to *Program.cs*:
 
@@ -71,7 +71,7 @@ Please note that when you initialize AWS SDK’s *AmazonComprehendClient*, you n
 
 Run the program and verify that language was detected correctly with high confidence:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.5.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.5.png)
 
 7. Add the following code to detect the sentiment of the text. It creates an instance of *DetectSentimentRequest* and calls the method *DetectSentimentAsync*:
 
@@ -93,4 +93,4 @@ Run the program and verify that language was detected correctly with high confid
 
 Run the program and verify that text sentiment was detected correctly:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.6.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.6.png)

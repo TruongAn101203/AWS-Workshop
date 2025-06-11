@@ -11,11 +11,11 @@ Amazon Translate is a neural machine translation service that delivers fast, hig
 
 In this lab, we will use Amazon Translate to translate text from English to French.
 
-[Create project]()
+#### Create project
 
 1. Add *AWSSDK.Translate* Nuget package to your project:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.7.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.7.png)
 
 2. Add the following import statements to *Program.cs*:
 
@@ -53,4 +53,4 @@ Please note that when you initialize AWS SDK’s *AmazonTranslateClient*, you ne
 
 Run the program and verify that text was correctly translated:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.8.png)
+![ConnectPrivate](../../images/6-Adding-innovation/6.8.png)

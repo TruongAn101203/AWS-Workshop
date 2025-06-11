@@ -15,15 +15,15 @@ Bạn có thể truy cập cấu hình *Default Method Throttling* bằng cách:
 2. Nhấp vào stage (ví dụ: Prod)
 3. Nhấn Edit
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.15.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.15.png)
 
 Bật throttling, thay đổi giá trị throttling thành *1* request/giây, với tốc độ burst là *1* request. Chúng ta chọn giá trị thấp này để dễ dàng kiểm tra mà không cần phần mềm load-testing. Lưu các thay đổi.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.16.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.16.png)
 
 Xác nhận các thay đổi:
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.17.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.17.png)
 
 Tạo file script PowerShell mới với nội dung sau (thay bằng URL API Gateway của bạn):
 
@@ -39,5 +39,5 @@ Mở PowerShell, chuyển đến thư mục chứa file script. Chạy script b�
 
 Tùy thuộc vào kết nối mạng và tốc độ máy tính, bạn sẽ thấy một số yêu cầu thành công với mã trạng thái 200, trong khi các yêu cầu khác sẽ thất bại với thông báo lỗi *{“message”:“Too Many Requests”}* báo hiệu các yêu cầu bị throttled.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.18.png)
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.18.1.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.18.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.18.1.png)

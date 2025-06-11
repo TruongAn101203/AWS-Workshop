@@ -9,17 +9,17 @@ pre : " <b> 4.2.2 </b> "
 
 Tạo dự án mới sử dụng mẫu *AWS Lambda Project* (.NET Core - C#).
 
-![ConnectPrivate](/images/4-Securely/4.12.png)
+![ConnectPrivate](../../../../images/4-Securely/4.12.png)
 
-![ConnectPrivate](/images/4-Securely/4.13.png)
+![ConnectPrivate](../../../../images/4-Securely/4.13.png)
 
 Trong cửa sổ Select Blueprint, chọn blueprint *Empty Top-level Function* và nhấn nút *Finish*.
 
-![ConnectPrivate](/images/4-Securely/4.14.png)
+![ConnectPrivate](../../../../images/4-Securely/4.14.png)
 
 Sau khi dự án được tạo, thêm gói NuGet *AWSSDK.SimpleSystemsManagement* vào dự án.
 
-![ConnectPrivate](/images/4-Securely/4.15.png)
+![ConnectPrivate](../../../../images/4-Securely/4.15.png)
 
 Mở file *Function.cs* và thêm các câu lệnh using sau:
 

@@ -12,11 +12,11 @@ Amazon Translate cho phép bạn địa phương hóa nội dung – như trang 
 
 Trong bài lab này, chúng ta sẽ sử dụng Amazon Translate để dịch văn bản từ tiếng Anh sang tiếng Pháp.
 
-[Tạo dự án]()
+#### Tạo dự án
 
 1. Thêm gói Nuget *AWSSDK.Translate* vào dự án của bạn:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.7.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.7.png)
 
 2. Thêm các lệnh using sau vào file *Program.cs*:
 
@@ -54,4 +54,4 @@ Lưu ý rằng khi bạn khởi tạo *AmazonTranslateClient* của AWS SDK, b�
 
 Chạy chương trình và xác nhận rằng văn bản đã được dịch chính xác:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.8.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.8.png)

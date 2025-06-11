@@ -13,13 +13,13 @@ Trên AWS Explorer, chọn nút *Amazon S3* rồi chọn bucket Amazon S3 mà b�
 
 Tạo một thư mục mới có tên *images* bằng cách nhấn nút *Create Folder*.
 
-![ConnectPrivate](/images/2-Severless-compute/2.21.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.21.png)
 
 Vào thư mục *images*.
 
 Nhấn nút *Upload file*, chọn và tải lên một file ảnh thử nghiệm (jpg hoặc jpeg).
 Sau vài giây, bạn sẽ thấy hình ảnh sẽ được upload trên thư mục *images*.
 
-![ConnectPrivate](/images/2-Severless-compute/2.22.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.22.png)
 
 

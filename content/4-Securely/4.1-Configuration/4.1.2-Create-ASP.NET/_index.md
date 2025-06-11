@@ -9,17 +9,17 @@ pre : " <b> 4.1.2 </b> "
 
 Create new *ASP.NET Core Web API*.
 
-![ConnectPrivate](/images/4-Securely/4.4.png)
+![ConnectPrivate](../../../images/4-Securely/4.4.png)
 
 Name your project *ParameterStoreDemo*
 
 Choose *.NET 8.0* and remove HTTPS support:
 
-![ConnectPrivate](/images/4-Securely/4.5.png) 
+![ConnectPrivate](../../../images/4-Securely/4.5.png) 
 
 Once project is created, add *Amazon.Extensions.Configuration.SystemsManager* Nuget package to the project.
 
-![ConnectPrivate](/images/4-Securely/4.6.png)
+![ConnectPrivate](../../../images/4-Securely/4.6.png)
 
 Next you need to enable new configuration provider in the code.
 
@@ -42,6 +42,6 @@ Add another API to read connection string from the configuration by adding the f
 
 Build & Run the project and verify that connection string is displayed in decrypted form.
 
-![ConnectPrivate](/images/4-Securely/4.7.png)
+![ConnectPrivate](../../../images/4-Securely/4.7.png)
 
 Congratulations! You have successfully configured AWS Systems Manager configuration source provider and retrieved parameter from the parameter store using standard IConfiguration interface.

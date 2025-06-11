@@ -11,11 +11,11 @@ Bây giờ chúng ta sẽ tải xuống và cài đặt .NET 8 SDK.
 
 Truy cập trang web chính thức của .NET 8: [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) để lấy liên kết tải xuống trực tiếp các tệp nhị phân mới nhất của .NET 8 SDK:
 
-![ConnectPrivate](/images/7-Graviton/7.6.png)
+![ConnectPrivate](../../../images/7-Graviton/7.6.png)
 
 Nhấp vào *Arm64* và sao chép liên kết tải xuống trực tiếp:
 
-![ConnectPrivate](/images/7-Graviton/7.6.1.png)
+![ConnectPrivate](../../../images/7-Graviton/7.6.1.png)
 
 Liên kết tải về cho .NET 8 SDK 8.0.303 là:
 
@@ -39,6 +39,6 @@ Bây giờ bạn có thể kiểm tra xem quá trình cài đặt có thành cô
 
 Kết quả đầu ra bạn sẽ thấy thông tin về phiên bản SDK, tương tự như sau:
 
-![ConnectPrivate](/images/7-Graviton/7.7.png)
+![ConnectPrivate](../../../images/7-Graviton/7.7.png)
 
 Chúc mừng! Bạn đã cài đặt thành công .NET 8 SDK!

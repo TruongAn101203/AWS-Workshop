@@ -15,4 +15,4 @@ pre : " <b> 5.7 </b> "
 
 Bạn sẽ thấy kết quả như sau khi stack đã được xóa:
 
-![ConnectPrivate](/images/5-Infrastructure/5.22.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.22.png)

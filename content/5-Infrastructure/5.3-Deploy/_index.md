@@ -23,8 +23,8 @@ Let’s check out the template synthesized from the sample app:
 
 It will output the following CloudFormation template:
 
-![ConnectPrivate](/images/5-Infrastructure/5.3.png)
-![ConnectPrivate](/images/5-Infrastructure/5.3.1.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.3.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.3.1.png)
 
 As you can see, this template includes four resources:
 
@@ -48,7 +48,7 @@ The CDK CLI requires you to be in the same directory as your cdk.json file.
 ```
 You will see output like this:
 
-![ConnectPrivate](/images/5-Infrastructure/5.4.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.4.png)
 
 [Deploy stack](#)
 
@@ -59,13 +59,13 @@ In order to deploy the resources defined in your AWS CDK app to AWS, use *cdk de
 ```
 You should see a warning like the following:
 
-![ConnectPrivate](/images/5-Infrastructure/5.5.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.5.png)
 
 This is warning you that deploying the app entails some risk. Since we need to allow the topic to send messages to the queue, enter *y* to deploy the stack and create the resources.
 
 Output should look like the following:
 
-![ConnectPrivate](/images/5-Infrastructure/5.6.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.6.png)
 
 [The CloudFormation Console](#)
 
@@ -75,15 +75,15 @@ This means that you can use the AWS CloudFormation console in order to manage yo
 
 Let’s take a look at the AWS CloudFormation console. Go to AWS Console and search for *CloudFormation*.
 
-![ConnectPrivate](/images/5-Infrastructure/5.7.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.7.png)
 
 Filter the list of stacks by cdk and you will see two CDK stacks deployed:
 
 - *CDKToolkit* - the CDK Toolkit Stack. It was created by *cdk bootstrap* and manages resources necessary for managing your Cloud Applications with AWS CDK.
 - *CdkLabStack* - sample CDK stack that you have just deployed by running *cdk deploy* command.
 
-![ConnectPrivate](/images/5-Infrastructure/5.8.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.8.png)
 
 Select *CdkLabStack* and open the *Resources* tab:
 
-![ConnectPrivate](/images/5-Infrastructure/5.9.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.9.png)

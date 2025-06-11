@@ -26,11 +26,11 @@ Run *cdk init* from within that folder with following parameters:
 
 You will see the output like this (please note that project name *CdkLab* is based on the name of folder you created):
 
-![ConnectPrivate](/images/5-Infrastructure/5.1.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.1.png)
 
 Open newly generated *CdkLab.sln* in Visual Studio.
 
-![ConnectPrivate](/images/5-Infrastructure/5.2.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.2.png)
 
 Open *Program.cs*. It instantiates the *CdkLabStack* class from the *CdkLabStack.cs* file.
 

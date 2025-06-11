@@ -16,4 +16,4 @@ Bạn nên lưu ý rằng hành động này không thể hoàn tác. Vì vậy,
 - Nhấn nút "Delete" ở góc trên bên phải.
 - Xác nhận xóa khi được hỏi.
   
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.19.clean.png)
+![ConnectPrivate](../../../images/3-Amazon-API-Gateway/3.19.clean.png)

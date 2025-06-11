@@ -15,22 +15,22 @@ Trên trang Roles, nhấp vào nút *Create role*.
 
 Ở màn hình tiếp theo, chọn *Lambda* làm dịch vụ sẽ sử dụng vai trò này, sau đó nhấn nút Next.
 
-![ConnectPrivate](/images/2-Severless-compute/2.9.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.9.png)
 
 Trên ô tìm kiếm bộ lọc policies, nhập *LambdaBasic* và chọn policy *AWSLambdaBasicExecutionRole*.
 
 
-![ConnectPrivate](/images/2-Severless-compute/2.10.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.10.png)
 
 Ngoài ra, nhập *S3Full* hoặc đơn giản là *s3* vào ô tìm kiếm và chọn policy *AmazonS3FullAccess*. Nhấn nút *Next*.
 
 
-![ConnectPrivate](/images/2-Severless-compute/2.11.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.11.png)
 
 Trên trang Review, đặt tên vai trò của bạn là *ImageResizeLambdaExecutionRole*, đảm bảo bạn thấy hai chính sách đã được thêm ở bước trên.
 
-![ConnectPrivate](/images/2-Severless-compute/2.12.1.png)
-![ConnectPrivate](/images/2-Severless-compute/2.12.2.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.12.1.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.12.2.png)
 
 Cuối cùng, nhấp vào nút *Create Role*.
 

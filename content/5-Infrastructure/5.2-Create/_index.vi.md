@@ -3,7 +3,7 @@ title : "Create test project"
 date: "2025-05-29"
 weight : 2
 chapter : false
-pre : " <b> .2 </b> "
+pre : " <b> 5.2 </b> "
 ---
 
 
@@ -27,11 +27,11 @@ Chạy *cdk init* trong thư mục đó với các tham số sau:
 
 Bạn sẽ thấy đầu ra như sau (lưu ý tên dự án *CdkLab* dựa trên tên thư mục bạn tạo):
 
-![ConnectPrivate](/images/5-Infrastructure/5.1.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.1.png)
 
 Mở tập tin *CdkLab.sln* mới được tạo trong Visual Studio.
 
-![ConnectPrivate](/images/5-Infrastructure/5.2.png)
+![ConnectPrivate](../../../images/5-Infrastructure/5.2.png)
 
 Mở *Program.cs*. Tập tin này khởi tạo lớp *CdkLabStack* từ file *CdkLabStack.cs*.
 

@@ -34,7 +34,7 @@ Now that you have modified your stack’s contents, you can ask the toolkit to s
 
 Output should look like the following. As expected, all resources are going to be destroyed.
 
-![ConnectPrivate](/images/5-Infrastructure/5.10.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.10.png)
 
 Run *cdk deploy* and see the resources being deleted:
 
@@ -42,4 +42,4 @@ Run *cdk deploy* and see the resources being deleted:
     cdk deploy
 ```
 
-![ConnectPrivate](/images/5-Infrastructure/5.11.png)
+![ConnectPrivate](../../images/5-Infrastructure/5.11.png)

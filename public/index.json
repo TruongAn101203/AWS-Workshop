@@ -1,328 +1,328 @@
 [
 {
-	"uri": "//localhost:1313/",
+	"uri": "http://localhost:1313/AWS-Workshop/",
 	"title": "Building .NET 8 applications using AWS",
 	"tags": [],
 	"description": "",
 	"content": "Building .NET 8 applications using AWS Overall This workshop is for .NET developers who have little to no experience with AWS. Participants will learn the basics of the platform by building series of .NET 8 applications using AWS.\nYou will learn:\nFamiliarize with AWS Toolkit for Visual Studio 2022 Familiarize with AWS SDK for .NET Develop cloud native applications with .NET on AWS Add AI capabilities to .NET applications Define cloud infrastructure using .NET You are going to use the following AWS services:\nAmazon S3 AWS Lambda Amazon API Gateway AWS Systems Manager Parameter Store Amazon Cognito Amazon CloudWatch AWS AI Services AWS Cloud Development Kit (CDK) Amazon EC2 Content Preparation Serverless compute with AWS Lambda Amazon API Gateway Securely store your secrets Authentication with Amazon Cognito Infrastructure Automation with CDK .NET Adding innovation with AWS AI Services .NET 8 on AWS Graviton Clean up resources "
 },
 {
-	"uri": "//localhost:1313/4-securely/4.2-sdk/4.2.1-create-iam-role/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.2-sdk/4.2.1-create-iam-role/",
 	"title": "Create IAM ROLE",
 	"tags": [],
 	"description": "",
 	"content": "On the AWS Console page, click on the IAM link under the Security, Identity \u0026amp; Compliance section (or search for IAM).\nOn the IAM Page, click on the Roles menu item in the left.\nOn the roles page, click on the Create role button.\nOn the next screen, select Lambda as the service which will use this role and then click on the Next button.\nOn the permission page, search for the AmazonSSMReadOnlyAccess role and select it. You are providing this role, read only access to AWS System Manager in order to fetch the parameters from the parameter stores. Click on the Next button.\nOn the review page, enter a suitable role name, for example DojoLambdaSSMRole.\nFinally, click on the Create Role button.\nThe role is created. Please remember this role name because you will need this information later when you deploy Lambda function.\n"
 },
 {
-	"uri": "//localhost:1313/4-securely/4.1-configuration/4.1.1-create-parameter/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.1-configuration/4.1.1-create-parameter/",
 	"title": "Create parameter",
 	"tags": [],
 	"description": "",
 	"content": "On the AWS Console page, search for Systems Manager.\nOn the Systems Manager page, click on the Parameter Store menu item in the left.\nOn the parameter store page, click on the Create parameter button.\nOn the parameter details page, enter parameter name as /SampleApp/ConnectionStrings/MyConnection, select type as SecureString, select KMS key source as My current account and KMS Key id as alias/aws/ssm (default). Finally enter a value for your parameter and then click on the Create parameter button.\nThe parameter is created and it has stored the parameter value in the encrypted format using the AWS KMS key.\n"
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.1-create-project/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.1-create-project/",
 	"title": "Create project",
 	"tags": [],
 	"description": "",
 	"content": "Create new project using AWS Serverless Application (.NET Core - C#) template.\nSelect ASP.NET Core Minimal API blueprint.\nTake a look at the generated sample project:\naws-lambda-tools-defaults.json file contains reference to the AWS Serverless Application Model (SAM) template that should be used to deploy serverless application serverless-template file contains AWS Serverless Application Model (SAM) template Program.cs adds AWS Lambda support.\n// When application is run in Lambda Kestrel is swapped out as the web server with Amazon.Lambda.AspNetCoreServer. // This package will act as the webserver translating request and responses between the Lambda event source and ASP.NET Core. builder.Services.AddAWSLambdaHosting(LambdaEventSource.RestApi); "
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.1-create-project/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.1-create-project/",
 	"title": "Create project ",
 	"tags": [],
 	"description": "",
 	"content": "Once logged into the EC2 via RDP connection, wait a few mins for applications to load and taskbar to populate.\nLaunch Visual Studio 2022 from the taskbar.\nClick Create new project\nIn the template searchbox type lambda and then select AWS Lambda Project (.NET Core - C#) template. Various AWS templates were installed as part of AWS Toolkit for Visual Studio.\nClick Next\nProvide a name for the project ImageResize. Click Next.\nSelect Simple S3 Function blueprint. Click Finish.\nTake a look at the generated sample project:\naws-lambda-tools-defaults.json file contains information about AWS Lambda runtime and reference to the AWS Lambda function handler Function.cs contains AWS Lambda function handler "
 },
 {
-	"uri": "//localhost:1313/6-adding-innovation/6.1-find-insights/",
+	"uri": "http://localhost:1313/AWS-Workshop/6-adding-innovation/6.1-find-insights/",
 	"title": "Find insights in text using Amazon Comprehend",
 	"tags": [],
 	"description": "",
 	"content": "Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to find insights and relationships in text. No machine learning experience required.\nIn this lab, you will use Amazon Comprehend to detect the language of the text and understand the sentiment of sample book review.\nCreate project\nCreate a new .NET Console App project. Choose .NET 8.0 framework:\nAdd AWSSDK.Comprehend Nuget package to the project: Add the following import statements to Program.cs: using Amazon.Comprehend; using Amazon.Comprehend.Model; Add the following code to initalize AmazonComprehendClient: var comprehendClient = new AmazonComprehendClient(Amazon.RegionEndpoint.EUWest1); Please note that when you initialize AWS SDK’s AmazonComprehendClient, you need to pass the RegionEndpoint of the region you are making labs in. The code below initializes AmazonComprehendClient in the EUWest1 region.\nAdd sample text to work with (or add your own text for testing purposes): var text = \u0026#34;This was such a beautiful book. I wasn\u0026#39;t even planning any travel when I came across this and just started flipping through the pages. I really like the cover and all the large glossy photographs in this book. John Smith did a wonderful job with the photography. I\u0026#39;ve found a perfect home for this on my coffee table. I\u0026#39;m planning a trip to Paris and Barcelona soon and I know this will come in handy. In the meantime, it\u0026#39;s perfect for assisting this armchair traveler!\u0026#34;; Add the following code to detect language of the text. It creates an instance of DetectDominantLanguageRequest and calls method DetectDominantLanguageAsync: var detectDominantLanguageRequest = new DetectDominantLanguageRequest() { Text = text }; var detectDominantLanguageResponse = await comprehendClient.DetectDominantLanguageAsync(detectDominantLanguageRequest); Console.WriteLine(\u0026#34;Detect Dominant Language:\u0026#34;); Console.WriteLine(\u0026#34;==========================\u0026#34;); foreach (var dominantLanguage in detectDominantLanguageResponse.Languages) { Console.WriteLine($\u0026#34;Language Code: {dominantLanguage.LanguageCode}, Score: {dominantLanguage.Score}\u0026#34;); } Run the program and verify that language was detected correctly with high confidence:\nAdd the following code to detect the sentiment of the text. It creates an instance of DetectSentimentRequest and calls the method DetectSentimentAsync: // 2 - Detect sentiment of the text var detectSentimentRequest = new DetectSentimentRequest() { Text = text, LanguageCode = \u0026#34;en\u0026#34; }; var detectSentimentResponse = await comprehendClient.DetectSentimentAsync(detectSentimentRequest); Console.WriteLine(\u0026#34;Detect Sentiment:\u0026#34;); Console.WriteLine(\u0026#34;==========================\u0026#34;); Console.WriteLine(detectSentimentResponse.Sentiment); Run the program and verify that text sentiment was detected correctly:\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.1-install-cdk/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.1-install-cdk/",
 	"title": "Install CDK",
 	"tags": [],
 	"description": "",
 	"content": "Run the following command to update Node.js to the latest LTS version (v20):\nchoco upgrade nodejs.install --version=20.17.0 Verify that you have latest version of Node.js installed by running the following command:\nnode --version You should see output like this:\nv20.17.0 Run the following command to update AWS CDK to the latest version:\nnpm install -g aws-cdk Verify that AWS CDK v2 is correctly installed by running the following command:\ncdk --version As output you should see version number, something like this:\n2.1018.0 (build e629e30) Please ensure that you use CDK v2.\n"
 },
 {
-	"uri": "//localhost:1313/7-aws-graviton/7.1-launch-ec2/",
+	"uri": "http://localhost:1313/AWS-Workshop/7-aws-graviton/7.1-launch-ec2/",
 	"title": "Launch EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "First you need to launch new Ubuntu EC2 instance powered by AWS Graviton processor.\nOn the AWS Console page, click on the EC2 link under the Compute section (or search for EC2). Click the Launch Instance button.\nYou are selecting Ubuntu Server as this is one of the Linux distributions supported by .NET 8 and that can be run on Arm64 architecture. You can check the list of currently supported Linux distributions for .NET here: Install .NET on Linux\nSet name of the new instance as DotNet8Graviton3 and select Ubuntu AMI fro Quick Start menu; Select Ubuntu Server 24.04 LTS from AMI dropdown; Select 64-bit (Arm) as architecture. Next select an c7g.medium compute-optimized instance type that offers 1 vCPU and 2GB of memory.\nNext you need to either create new or supply an existing key-pair. Create and download key-pair.\nNext under network settings configure new security group:\nOpen port 5000 to be able to access web application once it\u0026rsquo;s up and running Click Launch Instance.\nNow your instance is launching and you can click on the View Instances button to see the status of instances within your AWS account.\nWe are ready to connect to your c7g instance. The easiest way is to connect using Session Manager right from AWS Console.\nAfter successfully connecting, you will be at the Ubuntu command prompt.\nRun the following command:\nuname -i That will show that we are running on an ‘aarch64’ architecture which is the Linux architecture name for 64-bit Arm:\naarch64 Congratulations! You have successfully launched and connected to the Ubuntu instance powered by AWS Graviton!\n"
 },
 {
-	"uri": "//localhost:1313/1-prerequiste/",
+	"uri": "http://localhost:1313/AWS-Workshop/1-prerequiste/",
 	"title": "Preparation ",
 	"tags": [],
 	"description": "",
 	"content": "You can either run all the labs on your own computer or use provided remote Windows VM with all software preinstalled.\nIf you are going to do the labs on your own computer, you will need an AWS Account and the following software installed:\nAWS CLI Node.js (required for CDK lab) Visual Studio 2022 AWS Toolkit with Amazon Q Running the labs in your account will incur costs. The cost varies based on how long you run the labs for and if a full clean-up is performed.\nRefer Cleanup section to clean resources created for the lab.\nYou have to have all these tools installed in order to complete the labs.\n"
 },
 {
-	"uri": "//localhost:1313/4-securely/4.1-configuration/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.1-configuration/",
 	"title": "Use .NET Core Configuration",
 	"tags": [],
 	"description": "",
 	"content": "Configuration in .NET Core is quite different from what you were used to in the .NET Framework. With the .NET Framework, you had only app.config/web.config as our configuration source and, for any other sources, you had to create your custom configuration solution.\nThe .NET Core configuration system was built to be extensible. For example, when you create an ASP.NET Core application, by default it pulls configuration information from your appsettings.json file, command line arguments, and environment variables. You can also plug in other configuration source providers and then let your application access the configuration with the same interface.\nAWS provides NuGet package, Amazon.Extensions.Configuration.SystemsManager that simplifies how your application loads the application configuration settings in the AWS Systems Manager Parameter Store into the .NET Core configuration system.\n"
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.2-add-code/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.2-add-code/",
 	"title": "Add code to generate thumbnails",
 	"tags": [],
 	"description": "",
 	"content": "Add SixLabors.ImageSharp NuGet Package to the project:\nAdd the following using statements to the Function.cs file:\nusing Amazon.Lambda.Core; using Amazon.Lambda.S3Events; using Amazon.S3; using Amazon.S3.Model; using System.IO; using SixLabors.ImageSharp; using SixLabors.ImageSharp.Processing; using SixLabors.ImageSharp.PixelFormats; using SixLabors.ImageSharp.Formats.Jpeg; Replace the FunctionHandler method in the Function.cs file with the code below:\npublic async Task FunctionHandler(S3Event evnt, ILambdaContext context) { string[] fileExtentions = new string[] { \u0026#34;.jpg\u0026#34;, \u0026#34;.jpeg\u0026#34; }; var s3Event = evnt.Records?[0].S3; if (s3Event == null) { return; } try { foreach (var record in evnt.Records) { context.Logger.Log(\u0026#34;----\u0026gt; File: \u0026#34; + record.S3.Object.Key); if (!fileExtentions.Contains(Path.GetExtension(record.S3.Object.Key).ToLower())) { context.Logger.Log(\u0026#34;File Extention is not supported - \u0026#34; + s3Event.Object.Key); continue; } Stream imageStream = new MemoryStream(); var objectResponse = await S3Client.GetObjectAsync(record.S3.Bucket.Name, record.S3.Object.Key); using (Stream responseStream = objectResponse.ResponseStream) { using (var image = Image.Load(responseStream)) { // Create B\u0026amp;W thumbnail image.Mutate(ctx =\u0026gt; ctx.Grayscale().Resize(200, 200)); image.Save(imageStream, new JpegEncoder()); imageStream.Seek(0, SeekOrigin.Begin); } } // Creating a new S3 ObjectKey for the thumbnails string thumbnailObjectKey = \u0026#34;\u0026#34;; string objectKey = record.S3.Object.Key.ToLower(); int endSlash = objectKey.LastIndexOf(\u0026#34;/\u0026#34;); if (endSlash \u0026gt; 0) { string S3ObjectName = objectKey.Substring(endSlash + 1); int beginSlash = objectKey.Substring(0, endSlash - 1).LastIndexOf(\u0026#34;/\u0026#34;); if (beginSlash \u0026gt; 0) { thumbnailObjectKey = objectKey.Substring(0, beginSlash) + \u0026#34;thumbnails/\u0026#34; + S3ObjectName; } else { thumbnailObjectKey = \u0026#34;thumbnails/\u0026#34; + S3ObjectName; } } else { thumbnailObjectKey = \u0026#34;thumbnails/\u0026#34; + objectKey; } context.Logger.Log(\u0026#34;----\u0026gt; Thumbnail file Key: \u0026#34; + thumbnailObjectKey); await S3Client.PutObjectAsync(new PutObjectRequest { BucketName = record.S3.Bucket.Name, Key = thumbnailObjectKey, InputStream = imageStream }); } context.Logger.Log(\u0026#34;Processed \u0026#34; + evnt.Records.Count.ToString()); } catch (Exception e) { context.Logger.LogLine($\u0026#34;Error getting object {s3Event.Object.Key} from bucket {s3Event.Bucket.Name}\u0026#34;); context.Logger.LogLine($\u0026#34;Make sure they exist and your bucket is in the same region as this function\u0026#34;); context.Logger.LogLine(e.Message); context.Logger.LogLine(e.StackTrace); throw; } } The code above does the following:\nEnumerates all files received as part of S3Event:\nforeach (var record in evnt.Records) Download file from S3 bucket\nvar objectResponse = await S3Client.GetObjectAsync(record.S3.Bucket.Name, record.S3.Object.Key) Resizes and converts it to black and white:\nimage.Mutate(ctx =\u0026gt; ctx.Grayscale().Resize(200, 200)); image.Save(imageStream, new JpegEncoder()); Saves generated thumbnail back to S3 bucket:\nawait S3Client.PutObjectAsync(new PutObjectRequest { BucketName = record.S3.Bucket.Name, Key = thumbnailObjectKey, InputStream = imageStream }); "
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.2-add-logging/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.2-add-logging/",
 	"title": "Add logging",
 	"tags": [],
 	"description": "",
 	"content": "Update Program.cs file with another API and add logging by adding the following code after existing app.MapGet:\napp.MapGet(\u0026#34;/values\u0026#34;, (HttpRequest request) =\u0026gt; { app.Logger.LogInformation($\u0026#34;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt; GET values request from {request.HttpContext.Connection.RemoteIpAddress}\u0026#34;); return new string[] { \u0026#34;value1\u0026#34;, \u0026#34;value2\u0026#34; }; }); "
 },
 {
-	"uri": "//localhost:1313/4-securely/4.1-configuration/4.1.2-create-asp.net/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.1-configuration/4.1.2-create-asp.net/",
 	"title": "Create ASP.NET Core project",
 	"tags": [],
 	"description": "",
 	"content": "Create new ASP.NET Core Web API.\nName your project ParameterStoreDemo\nChoose .NET 8.0 and remove HTTPS support:\nOnce project is created, add Amazon.Extensions.Configuration.SystemsManager Nuget package to the project.\nNext you need to enable new configuration provider in the code.\nFor an ASP.NET Core application, you can do this in the Program.cs file by adding the following line before the var app = builder.Build();:\nbuilder.Configuration.AddSystemsManager(\u0026#34;/SampleApp\u0026#34;); Add another API to read connection string from the configuration by adding the following code to to Program.cs file before app.Run();:\napp.MapGet(\u0026#34;/connection\u0026#34;, (IConfiguration configuration) =\u0026gt; { var connectionString = configuration.GetConnectionString(\u0026#34;MyConnection\u0026#34;); return connectionString; }); Build \u0026amp; Run the project and verify that connection string is displayed in decrypted form.\nCongratulations! You have successfully configured AWS Systems Manager configuration source provider and retrieved parameter from the parameter store using standard IConfiguration interface.\n"
 },
 {
-	"uri": "//localhost:1313/4-securely/4.2-sdk/4.2.2-create-aws-lambda/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.2-sdk/4.2.2-create-aws-lambda/",
 	"title": "Create AWS Lambda project",
 	"tags": [],
 	"description": "",
 	"content": "Create new project using AWS Lambda Project(.NET Core - C#) template.\nOn the Select Blueprint window, select Empty Top-level Function blueprint and click on the Finish button.\nOnce project is created, add the following NuGet Package to the project: AWSSDK.SimpleSystemsManagement.\nOpen the Function.cs file and add the following using statements.\nusing Amazon.SimpleSystemsManagement; using Amazon.SimpleSystemsManagement.Model; In Function.cs file, replace the existing handler with the following code:\nvar handler = async (string input, ILambdaContext context) =\u0026gt; { var client = new AmazonSimpleSystemsManagementClient(); var request = new GetParameterRequest { Name = \u0026#34;/SampleApp/ConnectionStrings/MyConnection\u0026#34;, WithDecryption = true }; GetParameterResponse response = await client.GetParameterAsync(request); return string.Format(\u0026#34;Decrypted Value: {0}\u0026#34;, response.Parameter.Value); }; The code is ready. Build the Lambda project.\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.2-create/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.2-create/",
 	"title": "Create test project",
 	"tags": [],
 	"description": "",
 	"content": "Create new empty folder:\nmkdir cdk-lab cd cdk-lab You create a new AWS CDK project by invoking cdk init in an empty directory. cdk init uses the name of the project folder to name various elements of the project, including classes, subfolders, and files. The resulting project includes a reference to the Amazon.CDK.Lib NuGet package. It and its dependencies are installed automatically by NuGet.\nRun cdk init from within that folder with following parameters:\nsample-app is example CDK Application template with some constructs \u0026ndash;language csharp specifies that you want to use C# language cdk init sample-app --language csharp You will see the output like this (please note that project name CdkLab is based on the name of folder you created):\nOpen newly generated CdkLab.sln in Visual Studio.\nOpen Program.cs. It instantiates the CdkLabStack class from the CdkLabStack.cs file.\nusing Amazon.CDK; namespace CdkLab { sealed class Program { public static void Main(string[] args) { var app = new App(); new CdkLabStack(app, \u0026#34;CdkLabStack\u0026#34;); app.Synth(); } } } Open CdkLabStack.cs.\nusing Amazon.CDK; using Amazon.CDK.AWS.SNS; using Amazon.CDK.AWS.SNS.Subscriptions; using Amazon.CDK.AWS.SQS; using Constructs; namespace CdkLab { public class CdkLabStack : Stack { internal CdkLabStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props) { // The CDK includes built-in constructs for most resource types, such as Queues and Topics. var queue = new Queue(this, \u0026#34;CdkLabQueue\u0026#34;, new QueueProps { VisibilityTimeout = Duration.Seconds(300) }); var topic = new Topic(this, \u0026#34;CdkLabTopic\u0026#34;); topic.AddSubscription(new SqsSubscription(queue)); } } } The sample-app template has created the following stack for you.\nThe stack includes:\nAmazon SQS Queue (new Queue) Amazon SNS Topic (new Topic) Subscribing the queue to receive any messages published to the topic (topic.AddSubscription) "
 },
 {
-	"uri": "//localhost:1313/7-aws-graviton/7.2-install/",
+	"uri": "http://localhost:1313/AWS-Workshop/7-aws-graviton/7.2-install/",
 	"title": "Install .NET 8 SDK",
 	"tags": [],
 	"description": "",
 	"content": "Now we are going to download and install .NET 8 SDK.\nNavigate to the official .NET 8 web site: .NET 8 to get the direct link to the latest .NET 8 SDK binaries:\nClick on the Arm64 and copy the direct download link:\nThe download link for .NET 8 SDK 8.0.303 is the following:\nsudo wget https://download.visualstudio.microsoft.com/download/pr/4bfdbe1a-e1f9-4535-8da6-6e1e7ea0994c/b110641d008b36dded561ff2bdb0f793/dotnet-sdk-8.0.303-linux-arm64.tar.gz Create new folder and unzip SDK there (please change the version number to correspond to the SDK version that you downloaded):\nmkdir -p $HOME/dotnet \u0026amp;\u0026amp; tar zxf dotnet-sdk-8.0.303-linux-arm64.tar.gz -C $HOME/dotnet export DOTNET_ROOT=$HOME/dotnet export PATH=$PATH:$HOME/dotnet Now you can check that installation was successful:\ndotnet --info As output you should see SDK version information, something like this:\nCongratulations! You have successfully installed .NET 8 SDK!\n"
 },
 {
-	"uri": "//localhost:1313/6-adding-innovation/6.2-localize-content/",
+	"uri": "http://localhost:1313/AWS-Workshop/6-adding-innovation/6.2-localize-content/",
 	"title": "Localize content using Amazon Translate",
 	"tags": [],
 	"description": "",
 	"content": "Amazon Translate is a neural machine translation service that delivers fast, high-quality, and affordable language translation. Neural machine translation is a form of language translation automation that uses deep learning models to deliver more accurate and more natural sounding translation than traditional statistical and rule-based translation algorithms. Amazon Translate allows you to localize content - such as websites and applications - for international users, and to easily translate large volumes of text efficiently.\nIn this lab, we will use Amazon Translate to translate text from English to French.\nCreate project\nAdd AWSSDK.Translate Nuget package to your project: Add the following import statements to Program.cs: using Amazon.Translate; using Amazon.Translate.Model; Add the following code to initalize AmazonTranslateClient: var translateClient = new AmazonTranslateClient(Amazon.RegionEndpoint.EUWest1); Please note that when you initialize AWS SDK’s AmazonTranslateClient, you need to pass the RegionEndpoint of the region you are making labs in. The code below initializes AmazonTranslateClient in the EUWest1 region.\nAdd the following code to translate the text: var translatRequest = new TranslateTextRequest { Text = text, SourceLanguageCode = \u0026#34;en\u0026#34;, TargetLanguageCode = \u0026#34;fr\u0026#34; }; var translatResponse = await translateClient.TranslateTextAsync(translatRequest); Console.WriteLine(\u0026#34;Translation to French:\u0026#34;); Console.WriteLine(\u0026#34;==========================\u0026#34;); Console.WriteLine(translatResponse?.TranslatedText); Run the program and verify that text was correctly translated:\n"
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/",
 	"title": "Serverless compute with AWS Lambda",
 	"tags": [],
 	"description": "",
 	"content": "In this lab, you will create a simple AWS Lambda project using the Visual Studio 2022. You will create an AWS Lambda function that will generate B\u0026amp;W thumbnail once a image is saved in Amazon S3 bucket. The following exercises should be completed in order for this lab:\nCreate an AWS Lambda Project (C# and .NET 8) Create an Amazon S3 bucket Create AWS IAM Role Deploy AWS Lambda function from Visual Studio 2022 Create and associate S3 event with your AWS Lambda function Upload files and verify that AWS Lambda is executed and thumbnail is generated "
 },
 {
-	"uri": "//localhost:1313/4-securely/4.2-sdk/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.2-sdk/",
 	"title": "Use AWS SDK and Lambda",
 	"tags": [],
 	"description": "",
 	"content": "In the following exercise we will use AWS Lambda function to fetch the parameter we created in the previos exercise using AWS SDK.\nThe following tasks are covered as part of the lab:\nCreate AWS Lambda IAM Role Create AWS Lambda function Deploy and test AWS Lambda function "
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/",
 	"title": "Amazon API Gateway",
 	"tags": [],
 	"description": "",
 	"content": "In this lab, you will create a simple ASP.NET Web API, deploy it with the AWS Serverless Application Model (SAM) on AWS Lambda, and then configure Amazon API Gateway as a proxy layer in front of the Web API endpoints.\nAmazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. By using Amazon API Gateway in front of your application’s API endpoints, you can apply throttling, security, monitoring and logging, and improve performance by using the service’s caching functionality, as well as handle versioning and developer documentation (including Swagger support).\nYou will complete the following exercises during this lab:\nCreate an ASP.NET Web API using AWS Serverless Application template Add logging to the Web API Deploy ASP.NET Web API to Amazon API Gateway backed by AWS Lambda Test Throttling configuration of Amazon API Gateway "
 },
 {
-	"uri": "//localhost:1313/4-securely/4.3-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.3-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "\rYou should note that this action cannot be undone. Therefore, if the function contains important code or configurations, make sure to back them up before proceeding.\nLog in to the AWS Console. In the Services menu, search for and select Systems Manager, then navigate to Parameter Store to manage configuration parameters.\nSelect the parameter to delete by ticking the checkbox, e.g.:*/SampleApp/ConnectionStrings/MyConnection *\nClick the \u0026ldquo;Delete\u0026rdquo; button at the top right.\nConfirm the deletion when prompted.\n"
 },
 {
-	"uri": "//localhost:1313/6-adding-innovation/6.3-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/6-adding-innovation/6.3-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "\rYou should note that this action cannot be undone. Therefore, if the function contains important code or configurations, make sure to back them up before proceeding.\nThis lab does not create any long-term resources in AWS (such as S3, Lambda, DynamoDB, etc.), so there\u0026rsquo;s no need to access the AWS Console for cleanup.\nHowever, please keep the following in mind:\nIf you manually configured the SDK using an Access Key, make sure to delete or disable the IAM key after completing the lab to avoid potential leakage or unintended usage.\nDelete the project folder on your machine if you no longer need it to prevent accidental reruns and keep your workspace clean.\n"
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.3-create-s3-bucket/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.3-create-s3-bucket/",
 	"title": "Create S3 bucket",
 	"tags": [],
 	"description": "",
 	"content": "The easiest way to create an Amazon S3 bucket is using AWS Toolkit for Visual Studio 2022.\nOn the AWS Explorer choose your region Asia Pacific (Singapore)(ap-southeast-1), right click on the Amazon S3 and choose Create bucket\u0026hellip;.\nName you bucket as \u0026lt;YOUR_NAME\u0026gt;-image-resize-lab (to make it unique).\nOnce S3 bucket is created, you will see it under Amazon S3 in AWS Explorer.\n"
 },
 {
-	"uri": "//localhost:1313/7-aws-graviton/7.3-create-sample/",
+	"uri": "http://localhost:1313/AWS-Workshop/7-aws-graviton/7.3-create-sample/",
 	"title": "Create sample .NET 8 web application",
 	"tags": [],
 	"description": "",
 	"content": "Now that you have installed .NET 8 SDK, you can create sample .NET web application:\nCreate new folder:\nmkdir ~/awesomeapp cd ~/awesomeapp Run dotnet new webapp command to create new project based on webapp template (ASP.NET Core Web App):\ndotnet new webapp Now you can build and run the generated sample .NET web application and expose it on port 5000:\ndotnet run --urls=http://0.0.0.0:5000 Once you see the output like this, you can use your web browser to access it:\nOn the AWS Console page, click on the EC2 link under the Compute section (or search for EC2) and locate your EC2 instance. Copy public IPv4 address of the instance.\nOpen Web browser and navigate to public IPv4 address of the instance, port 5000:\nCongratulations! You have .NET 8 web application is up and running on AWS Graviton instance!\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.3-deploy/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.3-deploy/",
 	"title": "Deploy test project",
 	"tags": [],
 	"description": "",
 	"content": "AWS CDK apps are effectively only a definition of your infrastructure using code. When CDK apps are executed, they produce (or “synthesize”, in CDK parlance) an AWS CloudFormation template for each stack defined in your application.\nTo synthesize a CloudFormation template from a CDK app, use the cdk synth command\nThe CDK CLI requires you to be in the same directory as your cdk.json file.\nLet’s check out the template synthesized from the sample app:\ncdk synth It will output the following CloudFormation template:\nAs you can see, this template includes four resources:\nAWS::SQS::Queue - our queue AWS::SQS::QueuePolicy - the IAM policy which allows this topic to send messages to the queue AWS::SNS::Subscription - the subscription between the queue and the topic AWS::SNS::Topic - our topic Bootstrapping an enviroment\nThe first time you deploy an AWS CDK app into an environment (account/region), you’ll need to install a “bootstrap stack”. This stack includes resources that are needed for the toolkit operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.\nYou can use the cdk bootstrap command to install the bootstrap stack into an environment:\nThe CDK CLI requires you to be in the same directory as your cdk.json file.\ncdk bootstrap You will see output like this:\nDeploy stack\nIn order to deploy the resources defined in your AWS CDK app to AWS, use cdk deploy command.\ncdk deploy You should see a warning like the following:\nThis is warning you that deploying the app entails some risk. Since we need to allow the topic to send messages to the queue, enter y to deploy the stack and create the resources.\nOutput should look like the following:\nThe CloudFormation Console\nCDK apps are deployed through AWS CloudFormation. Each CDK stack maps 1:1 with CloudFormation stack.\nThis means that you can use the AWS CloudFormation console in order to manage your stacks.\nLet’s take a look at the AWS CloudFormation console. Go to AWS Console and search for CloudFormation.\nFilter the list of stacks by cdk and you will see two CDK stacks deployed:\nCDKToolkit - the CDK Toolkit Stack. It was created by cdk bootstrap and manages resources necessary for managing your Cloud Applications with AWS CDK. CdkLabStack - sample CDK stack that you have just deployed by running cdk deploy command. Select CdkLabStack and open the Resources tab:\n"
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.3-publish-project/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.3-publish-project/",
 	"title": "Publish project",
 	"tags": [],
 	"description": "",
 	"content": "After building your solution, right-click your project in Solution Explorer, and select Publish to AWS Lambda\u0026hellip; to launch the publishing wizard.\nEnsure the Account profile to use drop-down and Region drop-down are set to the profile and region you are using for today’s labs.\nUnder the Stack Name enter a stack name such as aws-serverless-api-test.\nThen, click the New\u0026hellip; under Amazon S3 Bucket and create a new bucket with a unique name like aws-serverless-api-test-SOMENUMBER.\nNow wait for the Serverless Application to be deployed, once it has finished the status should be CREATE_COMPLETE.\nBrowse the AWS Serverless URL (append /values to the end of the URL) to call the API method you created. Your browser should display the JSON for value1 and value2.\nhttps://nxlwjdj8ol.execute-api.eu-west-1.amazonaws.com/Prod/values Congratulations! You have your ASP.NET Web API up and running behind Amazon API Gateway!\n"
 },
 {
-	"uri": "//localhost:1313/4-securely/4.2-sdk/4.2.3-publish/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.2-sdk/4.2.3-publish/",
 	"title": "Publish project",
 	"tags": [],
 	"description": "",
 	"content": "In order to deploy the function, right click on the Lambda project and click on the Publish to AWS Lambda\u0026hellip; menu option.\nType in the function name as SSMDemo. Leave everything else as the default and click on the Next button.\nOn the Advanced Function Details screen, select the same role which you created in the first exercise (that role has access to the AWS Systems Manager Parameter Store). Click the Upload button.\nThe upload will start the function deployment. The deployment screen will close and test screen will open as soon as the AWS Lambda function is uploaded successfully.\nType in any string as input (as input has no meaning here) and then click on the Invoke button. It will execute the function and return the parameter value as the result.\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.4-clean-up-test-project/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.4-clean-up-test-project/",
 	"title": "Clean up test project",
 	"tags": [],
 	"description": "",
 	"content": "The project created using sample-app template includes an Amazon SQS queue, and an Amazon SNS topic. You’re not going to use them in your project, so remove them from your the CdkLabStack constructor.\nOpen CdkLabStack.cs and clean it up. It should look like this:\nusing Amazon.CDK; namespace CdkLab { public class CdkLabStack : Stack { internal CdkLabStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props) { // empty } } }` Now that you have modified your stack’s contents, you can ask the toolkit to show you the difference between your CDK app and what’s currently deployed. This is a safe way to check what will happen once you deploy and is always good practice:\ncdk diff Output should look like the following. As expected, all resources are going to be destroyed.\nRun cdk deploy and see the resources being deleted:\ncdk deploy "
 },
 {
-	"uri": "//localhost:1313/7-aws-graviton/7.4-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/7-aws-graviton/7.4-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "\rYou should note that this action cannot be undone. Therefore, if the function contains important code or configurations, make sure to back them up before proceeding.\nSelect the EC2 instance you want to delete: Go to EC2 \u0026gt; Instances. In the instance list, check the instance named DotNet8Graviton3 (ID: i-06bb5d87b4248c384). Open instance details: Click on the Instance ID to navigate to the detailed view. Confirm the termination when prompted. Terminate the instance: In the detail view, click the Instance state button (top right). From the dropdown, select Terminate (delete) instance. "
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.4-create-iam-role/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.4-create-iam-role/",
 	"title": "Create IAM role",
 	"tags": [],
 	"description": "",
 	"content": "On the AWS Console page, click on the IAM link under the Security, Identity \u0026amp; Compliance section (or search for IAM).\nOn the IAM Page, click on the Roles menu item in the left.\nOn the roles page, click on the Create role button.\nOn the next screen, select Lambda as the service which will use this role and then click on the Next button.\nOn the filter policies search, type LambdaBasic and select the AWSLambdaBasicExecutionRole policy.\nAlso, type S3Full or simply s3 at the search field and select the AmazonS3FullAccess policy. Click on Next button.\nOn the Review page name your role as ImageResizeLambdaExecutionRole, make sure you seeing the two policies added on the step above.\nFinally, click on the Create Role button.\n"
 },
 {
-	"uri": "//localhost:1313/4-securely/",
+	"uri": "http://localhost:1313/AWS-Workshop/4-securely/",
 	"title": "Securely store your secrets",
 	"tags": [],
 	"description": "",
 	"content": "The purpose of the lab is to store secret keys like connection strings and passwords in AWS Systems Manager Parameter Store in the encrypted format and then use two different ways to fetch values:\nUsing extensions to .NET Core configuration. Using AWS Lambda function and AWS SDK. AWS Systems Manager Parameter Store provides secure hierarchical storage for configuration data management and secrets management. Using AWS Systems Manager Parameter Store, you can safely store application configurations separately from your application’s code.\n"
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.4-verify-api/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.4-verify-api/",
 	"title": "Verify API Gateway",
 	"tags": [],
 	"description": "",
 	"content": "In the AWS Console, type api gateway into the search box to navigate to the API Gateway console.\nThe Serverless Application that you created deployed a new Amazon API Gateway.\nIn the left menu, under the name of the newly created API, click the Resources link to view the resources for your API.\nSelect the ANY value under {proxy+}.\nThe content pane will show a graphical-like view of the full round-trip path of requests, starting with the client in a box on the left, and the backend resource in a box on the right.\nOpen Test tab. In the method type, select GET as the method, /values as the path proxy, then click the Test button.\nThe response body should show the same json response as you saw in the browser earlier.\nGo to AWS Console and open CloudWatch.\nSearch for the serverless-api (the name of the application that you have deployed) log group.\nOpen the log group. You will be able to see the logs sent from your application and log entry from Get values API call.\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.5-deploy-aws/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.5-deploy-aws/",
 	"title": "Deploy AWS Lambda with CDK",
 	"tags": [],
 	"description": "",
 	"content": "In this module you are going to deploy sample AWS Lambda function using CDK.\nLambda handler code\nWe’ll start with the AWS Lambda handler code.\nCreate a directory lambda in the root of your project tree (next to src).\nAdd a file called lambda/hello.js with the following contents:\nexports.handler = async function(event) { console.log(\u0026#34;request:\u0026#34;, JSON.stringify(event, undefined, 2)); return { statusCode: 200, headers: { \u0026#34;Content-Type\u0026#34;: \u0026#34;text/plain\u0026#34; }, body: `Hello, CDK! You\u0026#39;ve hit ${event.path}\\n` }; }; This is a simple AWS Lambda function which returns the text “Hello, CDK! You’ve hit [url path]”. The function’s output also includes the HTTP status code and HTTP headers. These are used by API Gateway to formulate the HTTP response to the user.\nUpdate project\nThe AWS CDK is shipped with an extensive library of constructs called the AWS Construct Library.\nUpdate CdkLabStack.cs with the following changes:\nAdd using statement using Amazon.CDK.AWS.Lambda; Add Function resource using Amazon.CDK; using Constructs; using Amazon.CDK.AWS.Lambda; namespace CdkLab { public class CdkLabStack : Stack { internal CdkLabStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props) { // Defines a new lambda resource var hello = new Function(this, \u0026#34;HelloHandler\u0026#34;, new FunctionProps { Runtime = Runtime.NODEJS_20_X, // execution environment Code = Code.FromAsset(\u0026#34;lambda\u0026#34;), // Code loaded from the \u0026#34;lambda\u0026#34; directory Handler = \u0026#34;hello.handler\u0026#34; // file is \u0026#34;hello\u0026#34;, function is \u0026#34;handler\u0026#34; }); } } } A few things to notice:\nYour function uses NodeJS 20.X runtime The handler code is loaded from the lambda directory which we created earlier. Path is relative to where you execute cdk from, which is the project’s root directory The name of the handler function is hello.handler (hello is the name of the file and handler is the exported function name) Deploy\nFirst run cdk diff to take a look at the changes that are going to be deployed.\ncdk diff The output should look like this:\nAs you can see, this code synthesizes an AWS::Lambda::Function and AWS::IAM::Role resources. It also synthesized a couple of CloudFormation parameters that are used by the toolkit to propagate the location of the handler code.\nNow it\u0026rsquo;s time to deploy the function.\ncdk deploy You should see a warning like the following:\nEnter y to deploy the stack and create the resources.\nOnce stack is deployed, you should see the output like the following:\nTest the funtion\nOn the AWS Console page, click on the Lambda link under the Compute section (or search for Lambda).\nFind your Lambda function (name starts with CdkLabStack-HelloHandler) and open it.\nSwitch to Test tab and configure test event.\nChoose Amazon API Gateway AWS Proxy as event template (please notice the value of path attribute in the sample payload).\nClick Test button to run the function.\nExpand Details in the Executing function: succeeded pane and you should see an expected output (please notice that path value comes from the sample workload you provided):\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/",
 	"title": "Infrastructure Automation with CDK .NET",
 	"tags": [],
 	"description": "",
 	"content": "AWS CDK is a software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.\nAWS CDK allows you to define your cloud resources in a familiar programming language. The AWS CDK supports TypeScript, JavaScript, Python, Java, and C#/.NET\nIn this lab you will learn to:\nCreate new CDK applications Define your app’s infrastructure using the AWS Construct Library Deploy your CDK apps to your AWS account "
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.5-public-project/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.5-public-project/",
 	"title": "Publish project",
 	"tags": [],
 	"description": "",
 	"content": "After building your solution, right-click your project in Solution Explorer, and select Publish to AWS Lambda to launch the publishing wizard.\nEnsure the Account profile to use drop-down and Region drop-down are set to the profile and region you are using for today\u0026rsquo;s labs. Name your Lambda Function as ImageResize, and click Next.\nSelect the Role Name that you have created at previous part of this lab and click on Upload.\nOnce AWS Lambda function is published, you can see it in AWS Explorer:\n"
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.5-test-throttling/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.5-test-throttling/",
 	"title": "Test throttling",
 	"tags": [],
 	"description": "",
 	"content": "In this module you will test throttling configuration of Amazon API Gateway using simple load test script.\nYou can access the Default Method Throttling configuration by navigating to:\nStages Click on the stage (eg Prod) Click Edit Enable throttling, change the throttling values to 1 request/second, with a burst rate of 1 requests. We’re choosing this low value to make it easier to test without load-testing software. Save your changes.\nConfirm the changes:\nCreate the new PowerShell script file with the following content (use your API Gateway URL):\nWrite-Output \u0026#34;Sending GET request to your REST endpoint 10 times\u0026#34; for ($i = 0; $i -lt 10; $i++) { Invoke-WebRequest -Uri https://\u0026lt;Your API Endpoint URL\u0026gt;/Prod/values -UseBasicParsing -Method \u0026#39;Get\u0026#39; } Open PowerShell, and navigate to the folder where you saved the file. Run your PowerShell script by typing .\u0026lt;file-name\u0026gt;.ps1 where is the name you gave the file.\nDepending on your network connection, and the speed at which your computer is able to execute the requests, you will see some of the requests succeed with status code 200, while others will fail with the {“message”:“Too Many Requests”} error message indicating that requests were throttled.\n"
 },
 {
-	"uri": "//localhost:1313/6-adding-innovation/",
+	"uri": "http://localhost:1313/AWS-Workshop/6-adding-innovation/",
 	"title": "Adding innovation with AWS AI Services",
 	"tags": [],
 	"description": "",
 	"content": "With AI Services from AWS, you can add capabilities like image and video analysis, natural language processing, personalized recommendations and translation, virtual assistants, and speech recognition capability.\nEach of the services can be used standalone, or you can use them in concert to create sophisticated human-like functionality. Either way, you get instant access to fast, high quality AI tools based on the same technology used to power Amazon’s own businesses.\nIn this lab you are going to see how easy it is to add AI capabilities with AWS AI Services using AWS SDK for .NET.\n"
 },
 {
-	"uri": "//localhost:1313/3-amazon-api-gateway/3.6-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/3-amazon-api-gateway/3.6-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "\rYou should note that this action cannot be undone. Therefore, if the function contains important code or configurations, make sure to back them up before proceeding.\nLog in to the AWS Console, search for and select API Gateway under the Services menu. Đăng nhập vào AWS Console, tìm và chọn API Gateway trong mục Services. Select the API to delete (click on aws-serverless-api). Click the \u0026ldquo;Delete\u0026rdquo; button in the top right corner. Confirm the deletion when prompted. "
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.6-configure-event/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.6-configure-event/",
 	"title": "Configure event",
 	"tags": [],
 	"description": "",
 	"content": "Now you are going to associate a Amazon S3 event with your AWS Lambda function.\nOn the AWS Console page, click on the Lambda link under the Compute section (or search for Lambda).\nClick on the AWS Lambda function name you have published.\nAdd a Amazon S3 trigger to the AWS Lambda function by clicking on the Add trigger on the left.\nConfigure the trigger: select the bucket you have created on the bucket drop-down and enter images/ as the prefix the AWS Lambda will be watching, and press Add.\nDo not forget to define prefix\nThe AWS Lambda function will save the thumbnail image in a new folder called thumbnails within the same bucket. If you don’t define a prefix you AWS Lambda function will enter in a recursive loop as every time you save an image in the bucket the AWS Lambda function will be triggered.\nOnce trigger is created, you will see it under Triggerssection of your AWS Lambda function:\n"
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.6-deploy-amazon/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.6-deploy-amazon/",
 	"title": "Deploy Amazon API Gateway",
 	"tags": [],
 	"description": "",
 	"content": "Next step is to add an Amazon API Gateway in front of your function. Amazon API Gateway will expose a public HTTP endpoint that anyone on the internet can hit with web browser.\nYou will use AWS Lambda proxy integration mounted to the root of the API. This means that any request to any URL path will be proxied directly to your AWS Lambda function, and the response from the function will be returned back to the user.\nUpdate project\nAdd the following using statement:\nusing Amazon.CDK.AWS.APIGateway; Next add a LambdaRestApi construct to your stack that defines an API endpoint and associate it with our AWS Lambda function.\nnamespace CdkLab { public class CdkLabStack : Stack { internal CdkLabStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props) { .......... // defines an API Gateway REST API resource backed by our \u0026#34;hello\u0026#34; function. new LambdaRestApi(this, \u0026#34;Endpoint\u0026#34;, new LambdaRestApiProps { Handler = hello }); } } } That’s it. This is all you need to do in order to define an Amazon API Gateway which proxies all requests to an AWS Lambda function.\nDeploy\nFirst run cdk diff to take a look at the changes that are going to be deployed.\ncdk diff If you scroll down the output, you will see that 10 new resources will be created and one endpoint will be output:\nNow it\u0026rsquo;s time to deploy Amazon API Gateway.\ncdk deploy When deployment is complete, you’ll notice this line (scroll to the end of output):\nThis is a stack output that’s automatically added by the Amazon API Gateway construct and includes the URL of the Amazon API Gateway endpoint.\nNow you can try to open this URL in your browser:\n"
 },
 {
-	"uri": "//localhost:1313/7-aws-graviton/",
+	"uri": "http://localhost:1313/AWS-Workshop/7-aws-graviton/",
 	"title": ".NET 8 on AWS Graviton",
 	"tags": [],
 	"description": "",
 	"content": "In this lab, you are going to learn how to run .NET 8 web applications on AWS Graviton:\nLaunch new Ubuntu Server EC2 instance powered by AWS Graviton processor Install .NET 8 SDK and create sample ASP.NET web application "
 },
 {
-	"uri": "//localhost:1313/5-infrastructure/5.7-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/5-infrastructure/5.7-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "In order to delete created stack (and all created resources like AWS Lambda and Amazon API Gateway), run the following command:\ncdk destroy You will see output like this once the stack is destroyed:\n"
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.7-test-aws-lambda/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.7-test-aws-lambda/",
 	"title": "Test AWS Lambda function",
 	"tags": [],
 	"description": "",
 	"content": "Now it is time to upload a jpg file to the S3 bucket to test that event is triggered and AWS Lambda function is executed.\nOn the AWS Explorer choose Amazon S3 node and choose Amazon S3 bucket that you have created.\nCreate a new folder called images, by clicking the Create Folder button.\nGo into the images folder.\nClick on the Upload file button, select and upload some test image file (jpg or jpeg). After a few seconds, the image will appear in the images folder.\n"
 },
 {
-	"uri": "//localhost:1313/8-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/8-cleanup/",
 	"title": "Clean up",
 	"tags": [],
 	"description": "",
 	"content": " Each lab includes a dedicated cleanup guide. → Be sure to review the cleanup section at the end of every lab.\nCleaning up helps avoid unexpected charges. → If you don’t delete unused resources, they may keep running and incur costs.\nProper cleanup is part of professional practice. → Managing cloud resources efficiently saves money and keeps your environment tidy.\nWishing you successful learning and deployment!\n"
 },
 {
-	"uri": "//localhost:1313/2-serverless-compute/2.8-cleanup/",
+	"uri": "http://localhost:1313/AWS-Workshop/2-serverless-compute/2.8-cleanup/",
 	"title": "Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "\rYou should note that this action cannot be undone. Therefore, if the function contains important code or configurations, make sure to back them up before proceeding.\nGo to the \u0026ldquo;Functions\u0026rdquo; page: From the main Lambda service interface, navigate to the left-hand menu and click on Functions under the Lambda section. This will display a list of all your Lambda functions. Select the function to delete: In the list of functions, locate the one named ImageResize. Check the box to the left of the function name to select it. Click the \u0026ldquo;Actions\u0026rdquo; button: In the top-right corner above the function list, click on the Actions button to open a dropdown menu. Choose \u0026ldquo;Delete\u0026rdquo;: From the dropdown options, select Delete to initiate the deletion process. Confirm the deletion: AWS will prompt you to confirm the action. Follow the on-screen instructions to confirm and permanently delete the selected function. "
 },
 {
-	"uri": "//localhost:1313/categories/",
+	"uri": "http://localhost:1313/AWS-Workshop/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/tags/",
+	"uri": "http://localhost:1313/AWS-Workshop/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

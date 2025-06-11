@@ -9,7 +9,7 @@ pre : " <b> 2.2 </b> "
 
 Thêm gói *NuGet SixLabors.ImageSharp* vào dự án:
 
-![ConnectPrivate](/images/2-Severless-compute/2.6.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.6.png)
 
 Thêm các lệnh using sau vào file *Function.cs*:
 

@@ -11,21 +11,21 @@ Amazon Comprehend là một dịch vụ xử lý ngôn ngữ tự nhiên (NLP) s
 
 Trong bài lab này, bạn sẽ sử dụng Amazon Comprehend để phát hiện ngôn ngữ của văn bản và hiểu được cảm xúc của một đoạn đánh giá sách mẫu.
 
-[Tạo dự án]()
+#### Tạo dự án
 
 1. Tạo một dự án .NET Console App mới.
 
-![ConnectPrivate](/images/6-Adding-innovation/6.1.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.1.png)
 
-![ConnectPrivate](/images/6-Adding-innovation/6.2.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.2.png)
 
 Chọn .NET 8.0 framework:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.3.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.3.png)
 
 2. Thêm gói NuGet *AWSSDK.Comprehend* vào dự án:
    
-![ConnectPrivate](/images/6-Adding-innovation/6.4.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.4.png)
 
 3. Thêm các lệnh import sau vào *Program.cs*:
 
@@ -71,7 +71,7 @@ Khi bạn khởi tạo *AmazonComprehendClient* của AWS SDK, bạn cần truy�
 
 Chạy chương trình và kiểm tra xem ngôn ngữ đã được phát hiện chính xác với độ tin cậy cao hay chưa:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.5.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.5.png)
 
 7. Thêm đoạn mã sau để phát hiện cảm xúc của văn bản. Đoạn mã này tạo một đối tượng *DetectSentimentRequest* và gọi phương thức *DetectSentimentAsync*:
 
@@ -93,4 +93,4 @@ Chạy chương trình và kiểm tra xem ngôn ngữ đã được phát hiện
 
 Chạy chương trình và kiểm tra xem cảm xúc của văn bản đã được phát hiện đúng hay chưa:
 
-![ConnectPrivate](/images/6-Adding-innovation/6.6.png)
+![ConnectPrivate](../../../images/6-Adding-innovation/6.6.png)

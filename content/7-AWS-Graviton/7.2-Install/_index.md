@@ -10,11 +10,11 @@ Now we are going to download and install .NET 8 SDK.
 
 Navigate to the official .NET 8 web site: [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) to get the direct link to the latest .NET 8 SDK binaries:
 
-![ConnectPrivate](/images/7-Graviton/7.6.png)
+![ConnectPrivate](../../images/7-Graviton/7.6.png)
 
 Click on the *Arm6*4 and copy the direct download link:
 
-![ConnectPrivate](/images/7-Graviton/7.6.1.png)
+![ConnectPrivate](../../images/7-Graviton/7.6.1.png)
 
 The download link for .NET 8 SDK 8.0.303 is the following:
 
@@ -38,6 +38,6 @@ Now you can check that installation was successful:
 
 As output you should see SDK version information, something like this:
 
-![ConnectPrivate](/images/7-Graviton/7.7.png)
+![ConnectPrivate](../../images/7-Graviton/7.7.png)
 
 Congratulations! You have successfully installed .NET 8 SDK!

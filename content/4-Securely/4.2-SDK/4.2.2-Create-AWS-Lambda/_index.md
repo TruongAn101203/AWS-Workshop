@@ -9,17 +9,17 @@ pre : " <b> 4.2.2 </b> "
 
 Create new project using *AWS Lambda Project*(.NET Core - C#) template.
 
-![ConnectPrivate](/images/4-Securely/4.12.png)
+![ConnectPrivate](../../../images/4-Securely/4.12.png)
 
-![ConnectPrivate](/images/4-Securely/4.13.png)
+![ConnectPrivate](../../../images/4-Securely/4.13.png)
 
 On the Select Blueprint window, select *Empty Top-level Function* blueprint and click on the *Finish* button.
 
-![ConnectPrivate](/images/4-Securely/4.14.png)
+![ConnectPrivate](../../../images/4-Securely/4.14.png)
 
 Once project is created, add the following NuGet Package to the project: *AWSSDK.SimpleSystemsManagement*.
 
-![ConnectPrivate](/images/4-Securely/4.15.png)
+![ConnectPrivate](../../../images/4-Securely/4.15.png)
 
 Open the Function.cs file and add the following using statements.
 

@@ -16,7 +16,7 @@ Bạn nên lưu ý rằng hành động này không thể hoàn tác. Vì vậy,
 - Nhấn nút "Actions": Ở góc trên bên phải của danh sách hàm, bạn sẽ thấy nút **Actions**. Nhấp vào nút này để mở ra danh sách các hành động có thể thực hiện.
 - Chọn "Delete": Từ menu xổ xuống sau khi nhấn Actions, chọn mục **Delete** để bắt đầu quá trình xóa hàm.
 
-![ConnectPrivate](/images/2-Severless-compute/2.23.clean.png)
+![ConnectPrivate](../../../images/2-Severless-compute/2.23.clean.png)
 
 - Xác nhận xóa: Hệ thống AWS sẽ hiển thị một hộp thoại yêu cầu bạn xác nhận việc xóa. Hãy làm theo hướng dẫn để xác nhận và hoàn tất việc xóa hàm khỏi tài khoản.
 

@@ -19,31 +19,31 @@ Bạn đang chọn *Ubuntu Server* vì đây là một trong những bản phân
 - Chọn *Ubuntu Server 24.04* LTS từ danh sách AMI;
 - Chọn kiến trúc *64-bit (Arm)*.
 
-![ConnectPrivate](/images/7-Graviton/7.1.png)
+![ConnectPrivate](../../../images/7-Graviton/7.1.png)
 
 Tiếp theo, chọn loại phiên bản tối ưu hóa tính toán *c7g.medium*, cung cấp 1 vCPU và 2GB bộ nhớ.
 
-![ConnectPrivate](/images/7-Graviton/7.2.png)
+![ConnectPrivate](../../../images/7-Graviton/7.2.png)
 
 Tiếp theo, bạn cần tạo mới hoặc cung cấp một cặp khóa hiện có. Tạo và tải về cặp khóa.
 
-![ConnectPrivate](/images/7-Graviton/7.2.1.png)
+![ConnectPrivate](../../../images/7-Graviton/7.2.1.png)
 
 Sau đó, trong phần thiết lập mạng, cấu hình một security group mới:
 
 - Mở cổng 5000 để có thể truy cập ứng dụng web khi nó chạy.
 
-![ConnectPrivate](/images/7-Graviton/7.3.png)
+![ConnectPrivate](../../../images/7-Graviton/7.3.png)
 
 Nhấp vào *Launch Instance*.
 
 Bây giờ phiên bản của bạn đang được khởi chạy và bạn có thể nhấp vào nút *View Instances* để xem trạng thái của các phiên bản trong tài khoản AWS của bạn.
 
-![ConnectPrivate](/images/7-Graviton/7.4.png)
+![ConnectPrivate](../../../images/7-Graviton/7.4.png)
 
 Chúng ta đã sẵn sàng để kết nối với phiên bản c7g. Cách dễ nhất là sử dụng Session Manager ngay từ AWS Console.
 
-![ConnectPrivate](/images/7-Graviton/7.5.png)
+![ConnectPrivate](../../../images/7-Graviton/7.5.png)
 
 Sau khi kết nối thành công, bạn sẽ ở tại dòng lệnh Ubuntu.
 

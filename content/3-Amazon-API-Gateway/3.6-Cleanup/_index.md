@@ -17,4 +17,4 @@ You should note that this action cannot be undone. Therefore, if the function co
 - Click the "Delete" button in the top right corner.
 - Confirm the deletion when prompted.
 
-![ConnectPrivate](/images/3-Amazon-API-Gateway/3.19.clean.png)
+![ConnectPrivate](../../images/3-Amazon-API-Gateway/3.19.clean.png)
