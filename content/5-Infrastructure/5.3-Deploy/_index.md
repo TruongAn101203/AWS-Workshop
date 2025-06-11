@@ -33,7 +33,7 @@ As you can see, this template includes four resources:
 - AWS::SNS::Subscription - the subscription between the queue and the topic
 - AWS::SNS::Topic - our topic
 
-[Bootstrapping an enviroment](#)
+#### Bootstrapping an enviroment
 
 The first time you deploy an AWS CDK app into an environment (account/region), you’ll need to install a “bootstrap stack”. This stack includes resources that are needed for the toolkit operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.
 
@@ -50,7 +50,7 @@ You will see output like this:
 
 ![ConnectPrivate](../../images/5-Infrastructure/5.4.png)
 
-[Deploy stack](#)
+#### Deploy stack
 
 In order to deploy the resources defined in your AWS CDK app to AWS, use *cdk deploy* command.
 
@@ -67,7 +67,7 @@ Output should look like the following:
 
 ![ConnectPrivate](../../images/5-Infrastructure/5.6.png)
 
-[The CloudFormation Console](#)
+#### The CloudFormation Console
 
 CDK apps are deployed through AWS CloudFormation. Each CDK stack maps 1:1 with CloudFormation stack.
 

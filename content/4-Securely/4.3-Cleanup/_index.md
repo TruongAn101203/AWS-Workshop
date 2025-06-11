@@ -13,10 +13,8 @@ You should note that this action cannot be undone. Therefore, if the function co
 
 - Log in to the AWS Console. In the **Services** menu, search for and select **Systems Manager**, then navigate to **Parameter Store** to manage configuration parameters.
 
-- Select the parameter to delete by ticking the checkbox, e.g.:*/SampleApp/ConnectionStrings/MyConnection
-*
+- Select the parameter to delete by ticking the checkbox, e.g.:*/SampleApp/ConnectionStrings/MyConnection*
 - Click the "Delete" button at the top right.
-
 - Confirm the deletion when prompted.
 
 ![ConnectPrivate](../../images/4-Securely/4.20.clean.png)

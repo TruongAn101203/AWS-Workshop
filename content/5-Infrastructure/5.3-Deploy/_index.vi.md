@@ -33,7 +33,7 @@ Như bạn thấy, template này bao gồm bốn resources:
 - AWS::SNS::Subscription - sự đăng ký giữa hàng đợi và topic
 - AWS::SNS::Topic - topic của chúng ta
 
-[Bootstrapping an enviroment](#)
+#### Bootstrapping an enviroment
 
 Lần đầu tiên bạn triển khai một AWS CDK app vào một môi trường (account/region), bạn sẽ cần cài đặt một “bootstrap stack”. Stack này bao gồm các resources cần thiết cho hoạt động của toolkit. Ví dụ, stack này có một S3 bucket dùng để lưu template và assets trong quá trình triển khai.
 
@@ -51,7 +51,7 @@ Bạn sẽ thấy kết quả như sau:
 
 ![ConnectPrivate](../../../images/5-Infrastructure/5.4.png)
 
-[Deploy stack](#)
+#### Deploy stack
 
 Để triển khai các resources được định nghĩa trong AWS CDK app lên AWS, sử dụng lệnh *cdk deploy*.
 
@@ -69,7 +69,7 @@ Kết quả xuất ra sẽ như sau:
 
 ![ConnectPrivate](../../../images/5-Infrastructure/5.6.png)
 
-[The CloudFormation Console](#)
+#### The CloudFormation Console
 
 CDK apps được triển khai thông qua AWS CloudFormation. Mỗi CDK stack tương ứng 1:1 với CloudFormation stack.
 
