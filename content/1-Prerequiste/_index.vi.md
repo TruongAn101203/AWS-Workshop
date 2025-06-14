@@ -18,7 +18,8 @@ Nếu bạn định làm các bài thực hành trên máy tính cá nhân, bạ
 Việc thực hiện các bài thực hành trong tài khoản của bạn sẽ phát sinh chi phí. Chi phí này sẽ thay đổi tùy thuộc vào thời gian bạn chạy các bài thực hành và việc có thực hiện dọn dẹp hoàn toàn hay không.
 {{% /notice %}}
 
-Refer [Cleanup](/9-cleanup/) section to clean resources created for the lab.
+Tham khảo phần [Dọn dẹp](/9-cleanup/) để xóa các tài nguyên đã được tạo trong phòng lab.
+
 
 {{% notice note %}}
 Bạn phải cài đặt tất cả các công cụ này để có thể hoàn thành các bài thực hành.

@@ -6,7 +6,10 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
+
 Trong bài thực hành này, bạn sẽ tạo một dự án AWS Lambda đơn giản bằng Visual Studio 2022. Bạn sẽ xây dựng một hàm AWS Lambda có chức năng tạo hình ảnh thu nhỏ đen trắng (B&W thumbnail) mỗi khi một hình ảnh được lưu vào Amazon S3 bucket.
+
+![ConnectPrivate](../images/2-Severless-compute/2.diagram.png)
 
 Các bài tập sau cần được thực hiện theo thứ tự để hoàn thành bài thực hành này:
 - Tạo một dự án AWS Lambda (sử dụng C# và .NET 8)

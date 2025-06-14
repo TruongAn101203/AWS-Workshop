@@ -10,6 +10,8 @@ AWS CDK là một framework phát triển phần mềm giúp bạn định nghĩ
 
 AWS CDK cho phép bạn định nghĩa các tài nguyên đám mây bằng các ngôn ngữ lập trình quen thuộc. AWS CDK hỗ trợ các ngôn ngữ TypeScript, JavaScript, Python, Java và C#/.NET.
 
+![ConnectPrivate](../images/5-Infrastructure/5.diagram.png)
+
 Trong bài thực hành này, bạn sẽ học cách:
 
 - Tạo các ứng dụng CDK mới

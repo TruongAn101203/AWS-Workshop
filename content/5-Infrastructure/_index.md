@@ -10,6 +10,8 @@ AWS CDK is a software development framework for defining cloud infrastructure in
 
 AWS CDK allows you to define your cloud resources in a familiar programming language. The AWS CDK supports TypeScript, JavaScript, Python, Java, and C#/.NET
 
+![ConnectPrivate](../images/5-Infrastructure/5.diagram.png)
+
 In this lab you will learn to:
 
 - Create new CDK applications

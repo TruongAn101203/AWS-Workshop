@@ -12,6 +12,8 @@ Mục tiêu của bài thực hành là lưu trữ các khóa bí mật như chu
 - Sử dụng các phần mở rộng cho cấu hình của .NET Core.
 - Sử dụng hàm AWS Lambda kết hợp với AWS SDK.
 
+![ConnectPrivate](../images/4-Securely/4.diagram.png)
+
 AWS Systems Manager Parameter Store cung cấp một nơi lưu trữ có cấu trúc phân cấp và bảo mật cho việc quản lý cấu hình và thông tin bí mật. Bằng cách sử dụng Parameter Store, bạn có thể lưu trữ cấu hình ứng dụng một cách an toàn, tách biệt khỏi mã nguồn của ứng dụng.
 
 <!-- ### Content:

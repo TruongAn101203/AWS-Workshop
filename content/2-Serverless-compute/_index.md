@@ -6,7 +6,11 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
+
 In this lab, you will create a simple AWS Lambda project using the Visual Studio 2022. You will create an AWS Lambda function that will generate B&W thumbnail once a image is saved in Amazon S3 bucket.
+
+![ConnectPrivate](../images/2-Severless-compute/2.diagram.png)
+
 The following exercises should be completed in order for this lab:
 
 - Create an AWS Lambda Project (C# and .NET 8)

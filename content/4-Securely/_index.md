@@ -12,6 +12,8 @@ The purpose of the lab is to store secret keys like connection strings and passw
 - Using extensions to .NET Core configuration.
 - Using AWS Lambda function and AWS SDK.
   
+![ConnectPrivate](../images/4-Securely/4.diagram.png)
+
 AWS Systems Manager Parameter Store provides secure hierarchical storage for configuration data management and secrets management. Using AWS Systems Manager Parameter Store, you can safely store application configurations separately from your application’s code.
 
 <!-- ### Content:

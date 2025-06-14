@@ -10,6 +10,8 @@ In this lab, you will create a simple ASP.NET Web API, deploy it with the AWS Se
 
 Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. By using Amazon API Gateway in front of your application’s API endpoints, you can apply throttling, security, monitoring and logging, and improve performance by using the service’s caching functionality, as well as handle versioning and developer documentation (including Swagger support).
 
+![ConnectPrivate](../images/3-Amazon-API-Gateway/3.diagram.png)
+
 You will complete the following exercises during this lab:
 
 - Create an ASP.NET Web API using AWS Serverless Application template
