@@ -12,21 +12,21 @@
     <title>Deploy test project :: AWS System Manager</title>
 
     
-    <link href="/AWS-Workshop/css/nucleus.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hybrid.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/featherlight.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/auto-complete.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/theme.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hugo-theme.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/nucleus.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hybrid.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/featherlight.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/auto-complete.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hugo-theme.css?1750176930" rel="stylesheet">
     
-    <link href="/AWS-Workshop/css/theme-workshop.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme-workshop.css?1750176930" rel="stylesheet">
     
     
 
-    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1750176930"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1749645275"></script>
-<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1750176930"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1750176930"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/AWS-Workshop\/";
     
 </script>
-<script type="text/javascript" src="/AWS-Workshop/js/search.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/search.js?1750176930"></script>
 
     
   </div>
@@ -1540,7 +1540,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1582,7 +1590,7 @@
 <li>AWS::SNS::Subscription - the subscription between the queue and the topic</li>
 <li>AWS::SNS::Topic - our topic</li>
 </ul>
-<p><a href="">Bootstrapping an enviroment</a></p>
+<h4 id="bootstrapping-an-enviroment">Bootstrapping an enviroment</h4>
 <p>The first time you deploy an AWS CDK app into an environment (account/region), you’ll need to install a “bootstrap stack”. This stack includes resources that are needed for the toolkit operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.</p>
 <p>You can use the <em>cdk bootstrap</em> command to install the bootstrap stack into an environment:</p>
 
@@ -1592,7 +1600,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    cdk bootstrap
 </span></span></code></pre></div><p>You will see output like this:</p>
 <p><img src="../../images/5-Infrastructure/5.4.png" alt="ConnectPrivate"></p>
-<p><a href="">Deploy stack</a></p>
+<h4 id="deploy-stack">Deploy stack</h4>
 <p>In order to deploy the resources defined in your AWS CDK app to AWS, use <em>cdk deploy</em> command.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    cdk deploy
 </span></span></code></pre></div><p>You should see a warning like the following:</p>
@@ -1600,7 +1608,7 @@
 <p>This is warning you that deploying the app entails some risk. Since we need to allow the topic to send messages to the queue, enter <em>y</em> to deploy the stack and create the resources.</p>
 <p>Output should look like the following:</p>
 <p><img src="../../images/5-Infrastructure/5.6.png" alt="ConnectPrivate"></p>
-<p><a href="">The CloudFormation Console</a></p>
+<h4 id="the-cloudformation-console">The CloudFormation Console</h4>
 <p>CDK apps are deployed through AWS CloudFormation. Each CDK stack maps 1:1 with CloudFormation stack.</p>
 <p>This means that you can use the AWS CloudFormation console in order to manage your stacks.</p>
 <p>Let’s take a look at the AWS CloudFormation console. Go to AWS Console and search for <em>CloudFormation</em>.</p>
@@ -2401,19 +2409,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/AWS-Workshop/js/clipboard.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/jquery.sticky.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/featherlight.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/highlight.pack.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/clipboard.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/jquery.sticky.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/featherlight.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/highlight.pack.js?1750176930"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/learn.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/hugo-learn.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/learn.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/hugo-learn.js?1750176930"></script>
 
-    <link href="/AWS-Workshop/mermaid/mermaid.css?1749645275" rel="stylesheet" />
-    <script src="/AWS-Workshop/mermaid/mermaid.js?1749645275"></script>
+    <link href="/AWS-Workshop/mermaid/mermaid.css?1750176930" rel="stylesheet" />
+    <script src="/AWS-Workshop/mermaid/mermaid.js?1750176930"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

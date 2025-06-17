@@ -15,7 +15,6 @@ You will learn:
 - Familiarize with AWS Toolkit for Visual Studio 2022
 - Familiarize with AWS SDK for .NET
 - Develop cloud native applications with .NET on AWS
-- Add AI capabilities to .NET applications
 - Define cloud infrastructure using .NET
   
 You are going to use the following AWS services:
@@ -24,7 +23,6 @@ You are going to use the following AWS services:
 - AWS Lambda
 - Amazon API Gateway
 - AWS Systems Manager Parameter Store
-- Amazon Cognito
 - Amazon CloudWatch
 - AWS AI Services
 - AWS Cloud Development Kit (CDK)
@@ -37,8 +35,7 @@ You are going to use the following AWS services:
  2. [Serverless compute with AWS Lambda](2-Serverless-compute/)
  3. [Amazon API Gateway](3-Amazon-API-Gateway/)
  4. [Securely store your secrets](4-Securely/)
- 5. [Authentication with Amazon Cognito](5-Authentication/)
- 6. [Infrastructure Automation with CDK .NET](6-Infrastructure/)
- 7. [Adding innovation with AWS AI Services](7-Adding-innovation/)
- 8. [.NET 8 on AWS Graviton](8-AWS-Graviton/)
- 9.  [Clean up resources](9-cleanup/)
+ 5. [Infrastructure Automation with CDK .NET](5-Infrastructure/)
+ 6. [Adding innovation with AWS AI Services](6-Adding-innovation/)
+ 7. [.NET 8 on AWS Graviton](7-AWS-Graviton/)
+ 8.  [Clean up resources](8-cleanup/)

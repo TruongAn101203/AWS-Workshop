@@ -12,21 +12,21 @@
     <title>Amazon API Gateway :: AWS System Manager</title>
 
     
-    <link href="/AWS-Workshop/css/nucleus.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hybrid.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/featherlight.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/auto-complete.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/theme.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hugo-theme.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/nucleus.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hybrid.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/featherlight.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/auto-complete.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hugo-theme.css?1750176930" rel="stylesheet">
     
-    <link href="/AWS-Workshop/css/theme-workshop.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme-workshop.css?1750176930" rel="stylesheet">
     
     
 
-    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1750176930"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1749645275"></script>
-<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1750176930"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1750176930"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/AWS-Workshop\/\/vi";
     
 </script>
-<script type="text/javascript" src="/AWS-Workshop/js/search.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/search.js?1750176930"></script>
 
     
   </div>
@@ -1560,8 +1560,9 @@
 
 	<p>Trong bài thực hành này, bạn sẽ tạo một ứng dụng ASP.NET Web API đơn giản, triển khai nó bằng AWS Serverless Application Model (SAM) trên AWS Lambda, và sau đó cấu hình Amazon API Gateway làm lớp proxy phía trước các endpoint của Web API.</p>
 <p>Amazon API Gateway là một dịch vụ được quản lý hoàn toàn, giúp các nhà phát triển dễ dàng tạo, xuất bản, duy trì, giám sát và bảo mật các API ở mọi quy mô. Bằng cách sử dụng Amazon API Gateway trước các endpoint của API trong ứng dụng của bạn, bạn có thể áp dụng giới hạn truy cập (throttling), bảo mật, giám sát và ghi log, cải thiện hiệu năng bằng tính năng cache của dịch vụ, cũng như quản lý phiên bản và tài liệu dành cho nhà phát triển (bao gồm hỗ trợ Swagger).</p>
+<p><img src="../images/3-Amazon-API-Gateway/3.diagram.png" alt="ConnectPrivate"></p>
+<p>Bạn sẽ hoàn thành các bài tập sau trong bài thực hành này:</p>
 <ul>
-<li>Bạn sẽ hoàn thành các bài tập sau trong bài thực hành này:</li>
 <li>Tạo một ASP.NET Web API bằng mẫu AWS Serverless Application</li>
 <li>Thêm ghi log vào Web API</li>
 <li>Triển khai ASP.NET Web API lên Amazon API Gateway được hỗ trợ bởi AWS Lambda</li>
@@ -2351,19 +2352,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/AWS-Workshop/js/clipboard.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/jquery.sticky.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/featherlight.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/highlight.pack.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/clipboard.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/jquery.sticky.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/featherlight.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/highlight.pack.js?1750176930"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/learn.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/hugo-learn.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/learn.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/hugo-learn.js?1750176930"></script>
 
-    <link href="/AWS-Workshop/mermaid/mermaid.css?1749645275" rel="stylesheet" />
-    <script src="/AWS-Workshop/mermaid/mermaid.js?1749645275"></script>
+    <link href="/AWS-Workshop/mermaid/mermaid.css?1750176930" rel="stylesheet" />
+    <script src="/AWS-Workshop/mermaid/mermaid.js?1750176930"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

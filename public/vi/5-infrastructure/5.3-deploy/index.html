@@ -12,21 +12,21 @@
     <title>Triển khai dự án thử nghiệm :: AWS System Manager</title>
 
     
-    <link href="/AWS-Workshop/css/nucleus.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hybrid.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/featherlight.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/auto-complete.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/theme.css?1749645275" rel="stylesheet">
-    <link href="/AWS-Workshop/css/hugo-theme.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/nucleus.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/fontawesome-all.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hybrid.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/featherlight.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/perfect-scrollbar.min.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/auto-complete.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/atom-one-dark-reasonable.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme.css?1750176930" rel="stylesheet">
+    <link href="/AWS-Workshop/css/hugo-theme.css?1750176930" rel="stylesheet">
     
-    <link href="/AWS-Workshop/css/theme-workshop.css?1749645275" rel="stylesheet">
+    <link href="/AWS-Workshop/css/theme-workshop.css?1750176930" rel="stylesheet">
     
     
 
-    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/jquery-3.3.1.min.js?1750176930"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1749645275"></script>
-<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/lunr.min.js?1750176930"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/auto-complete.js?1750176930"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/AWS-Workshop\/\/vi";
     
 </script>
-<script type="text/javascript" src="/AWS-Workshop/js/search.js?1749645275"></script>
+<script type="text/javascript" src="/AWS-Workshop/js/search.js?1750176930"></script>
 
     
   </div>
@@ -1540,7 +1540,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1583,7 +1591,7 @@
 <li>AWS::SNS::Subscription - sự đăng ký giữa hàng đợi và topic</li>
 <li>AWS::SNS::Topic - topic của chúng ta</li>
 </ul>
-<p><a href="">Bootstrapping an enviroment</a></p>
+<h4 id="bootstrapping-an-enviroment">Bootstrapping an enviroment</h4>
 <p>Lần đầu tiên bạn triển khai một AWS CDK app vào một môi trường (account/region), bạn sẽ cần cài đặt một “bootstrap stack”. Stack này bao gồm các resources cần thiết cho hoạt động của toolkit. Ví dụ, stack này có một S3 bucket dùng để lưu template và assets trong quá trình triển khai.</p>
 <p>Bạn có thể dùng lệnh <em>cdk bootstrap</em> để cài đặt bootstrap stack vào một môi trường:</p>
 
@@ -1593,7 +1601,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    cdk bootstrap
 </span></span></code></pre></div><p>Bạn sẽ thấy kết quả như sau:</p>
 <p><img src="../../../images/5-Infrastructure/5.4.png" alt="ConnectPrivate"></p>
-<p><a href="">Deploy stack</a></p>
+<h4 id="deploy-stack">Deploy stack</h4>
 <p>Để triển khai các resources được định nghĩa trong AWS CDK app lên AWS, sử dụng lệnh <em>cdk deploy</em>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    cdk deploy
 </span></span></code></pre></div><p>Bạn sẽ thấy cảnh báo như sau:</p>
@@ -1601,7 +1609,7 @@
 <p>Đây là cảnh báo rằng việc triển khai app có thể gây ra một số rủi ro. Vì chúng ta cần cho phép topic gửi tin nhắn đến hàng đợi, nhập <em>y</em> để triển khai stack và tạo các resources.</p>
 <p>Kết quả xuất ra sẽ như sau:</p>
 <p><img src="../../../images/5-Infrastructure/5.6.png" alt="ConnectPrivate"></p>
-<p><a href="">The CloudFormation Console</a></p>
+<h4 id="the-cloudformation-console">The CloudFormation Console</h4>
 <p>CDK apps được triển khai thông qua AWS CloudFormation. Mỗi CDK stack tương ứng 1:1 với CloudFormation stack.</p>
 <p>Điều này có nghĩa là bạn có thể sử dụng console AWS CloudFormation để quản lý các stack của mình.</p>
 <p>Hãy cùng xem console AWS CloudFormation. Vào AWS Console và tìm kiếm <em>CloudFormation</em>.</p>
@@ -2402,19 +2410,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/AWS-Workshop/js/clipboard.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/jquery.sticky.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/featherlight.min.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/highlight.pack.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/clipboard.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/perfect-scrollbar.jquery.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/jquery.sticky.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/featherlight.min.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/highlight.pack.js?1750176930"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/learn.js?1749645275"></script>
-    <script src="/AWS-Workshop/js/hugo-learn.js?1749645275"></script>
+    <script src="/AWS-Workshop/js/modernizr.custom-3.6.0.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/learn.js?1750176930"></script>
+    <script src="/AWS-Workshop/js/hugo-learn.js?1750176930"></script>
 
-    <link href="/AWS-Workshop/mermaid/mermaid.css?1749645275" rel="stylesheet" />
-    <script src="/AWS-Workshop/mermaid/mermaid.js?1749645275"></script>
+    <link href="/AWS-Workshop/mermaid/mermaid.css?1750176930" rel="stylesheet" />
+    <script src="/AWS-Workshop/mermaid/mermaid.js?1750176930"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
