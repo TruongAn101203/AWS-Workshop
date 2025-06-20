@@ -12,13 +12,13 @@ Nếu bạn định làm các bài thực hành trên máy tính cá nhân, bạ
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [Node.js](https://nodejs.org/en/) (Yêu cầu cho bài thực hành CDK)
   - [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-  - [AWS Toolkit with Amazon Q](https://aws.amazon.com/visualstudio/)
+
 
 {{% notice warning %}}
 Việc thực hiện các bài thực hành trong tài khoản của bạn sẽ phát sinh chi phí. Chi phí này sẽ thay đổi tùy thuộc vào thời gian bạn chạy các bài thực hành và việc có thực hiện dọn dẹp hoàn toàn hay không.
 {{% /notice %}}
 
-Tham khảo phần [Dọn dẹp](/9-cleanup/) để xóa các tài nguyên đã được tạo trong phòng lab.
+Tham khảo phần [Dọn dẹp](/8-cleanup/) để xóa các tài nguyên đã được tạo trong phòng lab.
 
 
 {{% notice note %}}

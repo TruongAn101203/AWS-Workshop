@@ -27,6 +27,7 @@ You are going to use the following AWS services:
 - AWS AI Services
 - AWS Cloud Development Kit (CDK)
 - Amazon EC2
+
   
 <!-- ![ConnectPrivate](../../images/arc-log.png)  -->
 
@@ -38,4 +39,6 @@ You are going to use the following AWS services:
  5. [Infrastructure Automation with CDK .NET](5-Infrastructure/)
  6. [Adding innovation with AWS AI Services](6-Adding-innovation/)
  7. [.NET 8 on AWS Graviton](7-AWS-Graviton/)
- 8.  [Clean up resources](8-cleanup/)
+ 8. [Clean up resources](8-cleanup/)
+ <!-- 8. [AI-Assisted Coding with Amazon Q](8-AI-Assisted/) -->
+

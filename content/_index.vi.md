@@ -28,6 +28,7 @@ Trong workshop, bạn sẽ sử dụng các dịch vụ AWS sau:
 - AWS Cloud Development Kit (CDK)
 - Amazon EC2
 
+
 ### Content
  1. [Chuẩn bị](1-prerequiste/)
  2. [Điện toán không máy chủ với AWS Lambda](2-Serverless-compute/)
@@ -37,3 +38,4 @@ Trong workshop, bạn sẽ sử dụng các dịch vụ AWS sau:
  6. [Thêm đổi mới với các dịch vụ AI của AWS](6-Adding-innovation/)
  7. [.NET 8 trên AWS Graviton](7-AWS-Graviton/)
  8.  [Dọn dẹp tài nguyên](8-cleanup/)
+ <!-- 8. [Lập trình hỗ trợ bởi AI với Amazon Q](8-AI-Assisted/) -->

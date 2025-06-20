@@ -12,13 +12,13 @@ If you are going to do the labs on your own computer, you will need an AWS Accou
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [Node.js](https://nodejs.org/en/) (required for CDK lab)
   - [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-  - [AWS Toolkit with Amazon Q](https://aws.amazon.com/visualstudio/)
+
 
 {{% notice warning %}}
 Running the labs in your account will incur costs. The cost varies based on how long you run the labs for and if a full clean-up is performed.
 {{% /notice %}}
 
-Refer [Cleanup](/9-cleanup/) section to clean resources created for the lab.
+Refer [Cleanup](/8-cleanup/) section to clean resources created for the lab.
 
 {{% notice note %}}
 You have to have all these tools installed in order to complete the labs.

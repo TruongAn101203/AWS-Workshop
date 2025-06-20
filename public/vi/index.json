@@ -11,7 +11,7 @@
 	"title": "Chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Bạn có thể thực hiện tất cả các bài thực hành trên máy tính cá nhân của mình hoặc sử dụng máy ảo Windows từ xa được cung cấp sẵn với toàn bộ phần mềm đã được cài đặt.\nNếu bạn định làm các bài thực hành trên máy tính cá nhân, bạn sẽ cần một tài khoản AWS và cài đặt các phần mềm sau:\nAWS CLI Node.js (Yêu cầu cho bài thực hành CDK) Visual Studio 2022 AWS Toolkit with Amazon Q Việc thực hiện các bài thực hành trong tài khoản của bạn sẽ phát sinh chi phí. Chi phí này sẽ thay đổi tùy thuộc vào thời gian bạn chạy các bài thực hành và việc có thực hiện dọn dẹp hoàn toàn hay không.\nTham khảo phần Dọn dẹp để xóa các tài nguyên đã được tạo trong phòng lab.\nBạn phải cài đặt tất cả các công cụ này để có thể hoàn thành các bài thực hành.\n"
+	"content": "Bạn có thể thực hiện tất cả các bài thực hành trên máy tính cá nhân của mình hoặc sử dụng máy ảo Windows từ xa được cung cấp sẵn với toàn bộ phần mềm đã được cài đặt.\nNếu bạn định làm các bài thực hành trên máy tính cá nhân, bạn sẽ cần một tài khoản AWS và cài đặt các phần mềm sau:\nAWS CLI Node.js (Yêu cầu cho bài thực hành CDK) Visual Studio 2022 Việc thực hiện các bài thực hành trong tài khoản của bạn sẽ phát sinh chi phí. Chi phí này sẽ thay đổi tùy thuộc vào thời gian bạn chạy các bài thực hành và việc có thực hiện dọn dẹp hoàn toàn hay không.\nTham khảo phần Dọn dẹp để xóa các tài nguyên đã được tạo trong phòng lab.\nBạn phải cài đặt tất cả các công cụ này để có thể hoàn thành các bài thực hành.\n"
 },
 {
 	"uri": "http://localhost:1313/AWS-Workshop/vi/7-aws-graviton/7.1-launch-ec2/",

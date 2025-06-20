@@ -60,7 +60,7 @@
 	"title": "Preparation ",
 	"tags": [],
 	"description": "",
-	"content": "You can either run all the labs on your own computer or use provided remote Windows VM with all software preinstalled.\nIf you are going to do the labs on your own computer, you will need an AWS Account and the following software installed:\nAWS CLI Node.js (required for CDK lab) Visual Studio 2022 AWS Toolkit with Amazon Q Running the labs in your account will incur costs. The cost varies based on how long you run the labs for and if a full clean-up is performed.\nRefer Cleanup section to clean resources created for the lab.\nYou have to have all these tools installed in order to complete the labs.\n"
+	"content": "You can either run all the labs on your own computer or use provided remote Windows VM with all software preinstalled.\nIf you are going to do the labs on your own computer, you will need an AWS Account and the following software installed:\nAWS CLI Node.js (required for CDK lab) Visual Studio 2022 Running the labs in your account will incur costs. The cost varies based on how long you run the labs for and if a full clean-up is performed.\nRefer Cleanup section to clean resources created for the lab.\nYou have to have all these tools installed in order to complete the labs.\n"
 },
 {
 	"uri": "http://localhost:1313/AWS-Workshop/4-securely/4.1-configuration/",
